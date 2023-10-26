@@ -1,11 +1,12 @@
 import './App.css';
-import EmailSideBar from './components/sidebar/SocialSideBar';
+import EmailSideBar from './components/sidebar/EmailSideBar';
+import SocialSideBar from './components/sidebar/SocialSideBars';
 
 function App() {
   return (
     <main>
       <EmailSideBar />
-      <h1 className="text-xl font-bold underline">Hi mom!</h1>
+      <SocialSideBar />
     </main>
   );
 }

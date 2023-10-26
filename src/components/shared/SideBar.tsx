@@ -8,7 +8,7 @@ interface Props {
 function SideBar({ children, className }: Props) {
   const classes = `${
     className || ''
-  }hidden fixed bottom-0 mb-10 flex-col-reverse text-white 2xl:flex`;
+  } hidden fixed bottom-0 mb-10 flex-col-reverse text-white 2xl:flex`;
 
   return <div className={classes}>{children}</div>;
 }
