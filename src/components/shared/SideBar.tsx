@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
-interface Props {
+interface SideBarProps {
   children: ReactNode;
   className: string;
 }
 
-function SideBar({ children, className }: Props) {
+function SideBar({ children, className }: SideBarProps) {
   const classes = `${
     className || ''
   } hidden fixed bottom-0 mb-10 flex-col-reverse text-white 2xl:flex`;
