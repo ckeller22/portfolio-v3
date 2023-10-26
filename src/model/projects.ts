@@ -1,6 +1,15 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const projects = [
+type ProjectData = {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  githubURL: string;
+  liveURL: string | null;
+};
+
+const projects: Array<ProjectData> = [
   {
     id: uuidv4(),
     title: 'Portfolio Website v2',

@@ -3,7 +3,16 @@ import LinkedInIcon from '../components/icons/LinkedInIcon';
 import GitHubIcon from '../components/icons/GitHubIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 
-const links = [
+type IconType = typeof GitHubIcon | typeof LinkedInIcon | typeof TwitterIcon;
+
+type LinkData = {
+  id: string;
+  name: string;
+  url: string;
+  svg: React.ReactElement<IconType>;
+};
+
+const links: Array<LinkData> = [
   {
     id: uuidv4(),
     name: 'GitHub',
