@@ -31,6 +31,9 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react-refresh', 'react'],
   ignorePatterns: ['vitest-setup.ts'],
   rules: {
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
+    'arrow-body-style': ['error', 'always'],
     'react/react-in-jsx-scope': 0,
     'react-refresh/only-export-components': [
       'warn',
