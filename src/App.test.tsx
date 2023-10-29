@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { expect } from 'vitest';
-import App, { LOCAL_STORAGE_THEME_KEY, Theme } from './App';
+import App from './App';
+import { LOCAL_STORAGE_THEME_KEY, Theme } from './model/theme';
 
 describe('The App component', () => {
   beforeEach(() => {
