@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
+import PageLayout from './components/layout/PageLayout';
 // import EmailSideBar from './components/sidebar/EmailSideBar';
 // import SocialSideBar from './components/sidebar/SocialSideBars';
 
@@ -84,17 +85,20 @@ function App() {
   };
 
   return (
-    <div>
-      <button
-        data-testid="theme-button"
-        type="button"
-        aria-label="switch"
-        className="py-2 px-4 bg-black text-white "
-        onClick={handleClick}
-      >
-        switch
-      </button>
-    </div>
+    <>
+      <PageLayout />
+      <nav>
+        <button
+          data-testid="theme-button"
+          type="button"
+          aria-label="switch"
+          className="py-2 px-4 text-black  dark:text-white"
+          onClick={handleClick}
+        >
+          switch
+        </button>
+      </nav>
+    </>
   );
 }
 
