@@ -1,3 +1,6 @@
+import GenericText from '../shared/GenericText';
+import content from '../../data/content.json';
+
 function PageLayout() {
   return (
     <div className="flex h-full bg-zinc-50 dark:bg-black ">
@@ -15,16 +18,9 @@ function PageLayout() {
               <div className="px-4 sm:px-8 lg:px-12">
                 <div className="max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                    Full stack engineer, problem solver, and a builder of
-                    things.
+                    {content.introHeader}
                   </h1>
-                  <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                    Hello world! I am Chris, a Full Stack Engineer with a
-                    passion for building scalable, performant, and user-friendly
-                    applications. With a background in both front-end and
-                    back-end development, I strive to create seamless digital
-                    experiences that drive value and impact.
-                  </p>
+                  <GenericText className="mt-6" text={content.intro} />
                 </div>
               </div>
             </div>
