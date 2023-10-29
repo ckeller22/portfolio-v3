@@ -25,30 +25,6 @@ function PageLayout() {
               </div>
             </div>
           </div>
-          <div className="sm:px-8 mt-9">
-            <div className="mx-auto w-full max-w-7xl lg:px-8">
-              <div className="px-4 sm:px-8 lg:px-12">
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                  aperiam vel tempore molestias et vero vitae nesciunt illum quo
-                  delectus illo quibusdam quasi voluptatibus perspiciatis rem
-                  dolorum obcaecati, nihil quisquam?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="sm:px-8 mt-9">
-            <div className="mx-auto w-full max-w-7xl lg:px-8">
-              <div className="px-4 sm:px-8 lg:px-12">
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                  ipsa modi qui sed harum exercitationem illo laboriosam odio
-                  doloremque amet aliquid doloribus possimus impedit similique,
-                  fugiat alias quod minus libero.
-                </p>
-              </div>
-            </div>
-          </div>
         </main>
       </div>
     </div>
