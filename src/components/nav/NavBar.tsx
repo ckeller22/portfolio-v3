@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import portrait from '../../images/portrait.jpg';
 
 import {
@@ -49,11 +50,11 @@ function NavBar() {
 
     // If not, check if OS has preference and use that.
     const prefersDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)'
+      '(prefers-color-scheme: dark)',
     ).matches;
 
     const prefersLightMode = window.matchMedia(
-      '(prefers-color-scheme: light)'
+      '(prefers-color-scheme: light)',
     ).matches;
 
     if (prefersDarkMode) {
@@ -79,10 +80,12 @@ function NavBar() {
     toggleTheme();
   };
 
+  const iconClasses = 'h-6 w-6';
+
   return (
     <div className="flex">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
-        <div className="flex flex-row justify-between px-4 sm:px-8 lg:px-12 py-2 ">
+        <div className="flex flex-row items-center justify-between px-4 py-2 sm:px-8 lg:px-12 ">
           <div className="flex flex-shrink-0 items-center">
             <img
               className="h-12 w-12 rounded-full"
@@ -96,10 +99,14 @@ function NavBar() {
               data-testid="theme-button"
               type="button"
               aria-label="switch"
-              className="py-2 px-4 text-black  dark:text-white"
+              className="relative rounded-full bg-white/90 px-3 py-2 text-teal-500 shadow-sm ring-1 ring-zinc-900/5 backdrop-blur hover:text-zinc-300  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-800 dark:bg-zinc-800/90 dark:text-zinc-500 dark:shadow-none dark:ring-zinc-300/20"
               onClick={handleClick}
             >
-              switch
+              {currentTheme === Theme.Dark ? (
+                <MoonIcon className={iconClasses} />
+              ) : (
+                <SunIcon className={iconClasses} />
+              )}
             </button>
           </div>
         </div>
