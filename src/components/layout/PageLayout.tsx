@@ -1,5 +1,6 @@
 import GenericText from '../shared/GenericText';
 import content from '../../data/content.json';
+import NavBar from '../nav/NavBar';
 
 function PageLayout() {
   return (
@@ -12,6 +13,7 @@ function PageLayout() {
       </div>
 
       <div className="relative flex w-full flex-col" style={{ height: 5000 }}>
+        <NavBar />
         <main className="flex-auto">
           <div className="sm:px-8 mt-9">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
