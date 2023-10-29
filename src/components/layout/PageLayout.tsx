@@ -13,30 +13,43 @@ function PageLayout() {
           <div className="sm:px-8 mt-9">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="px-4 sm:px-8 lg:px-12">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo dolores aliquid dolore adipisci aliquam, voluptates
-                provident maiores rem consequatur unde veniam id repudiandae
-                itaque eius pariatur veritatis aspernatur facere reiciendis?
+                <div className="max-w-2xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                    Full stack engineer, problem solver, and a builder of
+                    things.
+                  </h1>
+                  <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                    Hello world! I am Chris, a Full Stack Engineer with a
+                    passion for building scalable, performant, and user-friendly
+                    applications. With a background in both front-end and
+                    back-end development, I strive to create seamless digital
+                    experiences that drive value and impact.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className="sm:px-8 mt-9">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="px-4 sm:px-8 lg:px-12">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo dolores aliquid dolore adipisci aliquam, voluptates
-                provident maiores rem consequatur unde veniam id repudiandae
-                itaque eius pariatur veritatis aspernatur facere reiciendis?
+                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                  aperiam vel tempore molestias et vero vitae nesciunt illum quo
+                  delectus illo quibusdam quasi voluptatibus perspiciatis rem
+                  dolorum obcaecati, nihil quisquam?
+                </p>
               </div>
             </div>
           </div>
           <div className="sm:px-8 mt-9">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="px-4 sm:px-8 lg:px-12">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo dolores aliquid dolore adipisci aliquam, voluptates
-                provident maiores rem consequatur unde veniam id repudiandae
-                itaque eius pariatur veritatis aspernatur facere reiciendis?
+                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  ipsa modi qui sed harum exercitationem illo laboriosam odio
+                  doloremque amet aliquid doloribus possimus impedit similique,
+                  fugiat alias quod minus libero.
+                </p>
               </div>
             </div>
           </div>
