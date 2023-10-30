@@ -96,16 +96,16 @@ function NavBar() {
           <div>
             <ul className="text-md flex flex-row rounded-full font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:text-zinc-200 dark:ring-zinc-300/20">
               <li className="rounded-l-full bg-white/90 py-2 pl-4 pr-3 dark:bg-zinc-800/90  ">
-                About
+                <a>About</a>
               </li>
               <li className=" bg-white/90 px-3 py-2  dark:bg-zinc-800/90 dark:ring-zinc-300/20">
-                Projects
+                <a>Projects</a>
               </li>
               <li className=" bg-white/90 py-2 pl-3  pr-4 dark:bg-zinc-800/90">
-                Experience
+                <a>Experience</a>
               </li>
               <li className="rounded-r-full bg-white/90 py-2 pl-3  pr-4 dark:bg-zinc-800/90">
-                Resume
+                <a>Resume</a>
               </li>
             </ul>
           </div>
