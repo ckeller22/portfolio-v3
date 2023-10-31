@@ -1,6 +1,7 @@
 import GenericText from '../shared/GenericText';
 import content from '../../data/content.json';
 import NavBar from '../nav/NavBar';
+import Footer from '../footer/Footer';
 
 function PageLayout() {
   return (
@@ -12,9 +13,9 @@ function PageLayout() {
         </div>
       </div>
 
-      <div className="relative flex w-full flex-col" style={{ height: 5000 }}>
+      <div className="relative flex w-full flex-col">
         <NavBar />
-        <main className="flex-auto">
+        <main className="flex-auto" style={{ height: 1080 }}>
           <div className="mt-9 sm:px-8">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="px-4 sm:px-8 lg:px-12">
@@ -46,6 +47,7 @@ function PageLayout() {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </div>
   );

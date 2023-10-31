@@ -83,7 +83,7 @@ function NavBar() {
   const iconClasses = 'h-6 w-6';
 
   return (
-    <div className="flex">
+    <header className="flex">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
         <div className="flex flex-row items-center justify-between px-4 py-2 sm:px-8 lg:px-12 ">
           <div className="flex flex-shrink-0 items-center">
@@ -126,7 +126,7 @@ function NavBar() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
