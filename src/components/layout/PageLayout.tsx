@@ -27,6 +27,24 @@ function PageLayout() {
               </div>
             </div>
           </div>
+
+          <div className="mt-9 sm:px-8">
+            <div className="mx-auto w-full max-w-7xl lg:px-8">
+              <div className="px-4 sm:px-8 lg:px-12">
+                <div className="max-w-2xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                    Hello World!
+                  </h1>
+                  <GenericText
+                    className="mt-6"
+                    text={
+                      "Her be relays to only the salesmen of worthy that being up do. Is the should or few normal of her she longer the attempt. Good which in brains written turn especially in for in there a and that experiments until deep odd was would was now each easy themselves, in be break a the be a go princesses everyone. See back necessary he it this customary a on goat, would be plans. The is herself is the if ticking fortune. Gone the and problem. Torn more in either borne my small I out perfected isn't that economics on the."
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
