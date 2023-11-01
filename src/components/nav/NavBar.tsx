@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import portrait from '../../images/portrait.jpg';
+import sections from '../../model/sections';
 
 import {
   DEFAULT_THEME,
@@ -82,6 +83,17 @@ function NavBar() {
 
   const iconClasses = 'h-6 w-6';
 
+  const navigationItems = sections.map((section) => {
+    return (
+      <li
+        key={section.id}
+        className="cursor-pointer px-3 py-2 hover:text-teal-400"
+      >
+        <button type="button">{section.name}</button>
+      </li>
+    );
+  });
+
   return (
     <header className="flex">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
@@ -94,19 +106,8 @@ function NavBar() {
             />
           </div>
           <div>
-            <ul className="text-md flex flex-row rounded-full font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:text-zinc-200 dark:ring-zinc-300/20">
-              <li className="rounded-l-full bg-white/90 py-2 pl-4 pr-3 dark:bg-zinc-800/90  ">
-                <a>About</a>
-              </li>
-              <li className=" bg-white/90 px-3 py-2  dark:bg-zinc-800/90 dark:ring-zinc-300/20">
-                <a>Projects</a>
-              </li>
-              <li className=" bg-white/90 py-2 pl-3  pr-4 dark:bg-zinc-800/90">
-                <a>Experience</a>
-              </li>
-              <li className="rounded-r-full bg-white/90 py-2 pl-3  pr-4 dark:bg-zinc-800/90">
-                <a>Resume</a>
-              </li>
+            <ul className="text-md flex flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+              {navigationItems}
             </ul>
           </div>
           <div>
@@ -114,7 +115,7 @@ function NavBar() {
               data-testid="theme-button"
               type="button"
               aria-label="switch"
-              className="relative rounded-full bg-white/90 px-3 py-2 text-teal-500 shadow-md ring-1 ring-zinc-900/5 backdrop-blur hover:text-zinc-300  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-800 dark:bg-zinc-800/90 dark:text-zinc-500 dark:shadow-none dark:ring-zinc-300/20"
+              className="relative rounded-full bg-white/90 px-3 py-2 text-teal-400 shadow-md ring-1 ring-zinc-900/5 backdrop-blur hover:text-zinc-300  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-800 dark:bg-zinc-800/90 dark:text-zinc-500 dark:shadow-none dark:ring-zinc-300/20"
               onClick={handleClick}
             >
               {currentTheme === Theme.Dark ? (
