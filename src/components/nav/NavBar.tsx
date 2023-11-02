@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import * as Dialog from '@radix-ui/react-dialog';
 import portrait from '../../images/portrait.jpg';
 import sections from '../../model/sections';
 
@@ -97,13 +98,42 @@ function NavBar() {
   return (
     <header className="flex">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
-        <div className="flex flex-row items-center justify-between px-4 py-2 sm:px-8 lg:px-12 ">
+        <div className="relative flex flex-row items-center justify-between px-4 py-2 sm:px-8 lg:px-12 ">
           <div className="flex flex-shrink-0 items-center">
-            <img
+            {/* <img
               className="h-12 w-12 rounded-full"
               src={portrait}
               alt="Your Company"
-            />
+            /> */}
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <button type="button" className="text-white">
+                  Menu
+                </button>
+              </Dialog.Trigger>
+              <Dialog.Portal>
+                <Dialog.Overlay asChild>
+                  <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
+                </Dialog.Overlay>
+                <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+                  <div className="p-6">
+                    <div className="flex flex-row justify-between">
+                      Navigation
+                      <Dialog.Close asChild>
+                        <XMarkIcon className="h-6 w-6" />
+                      </Dialog.Close>
+                    </div>
+                    <ul>
+                      <li>content</li>
+                      <li>content</li>
+                      <li>content</li>
+                      <li>content</li>
+                      <li>content</li>
+                    </ul>
+                  </div>
+                </Dialog.Content>
+              </Dialog.Portal>
+            </Dialog.Root>
           </div>
           <div>
             <ul className="text-md flex flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
