@@ -3,6 +3,7 @@ import content from '../../data/content.json';
 import NavBar from '../nav/NavBar';
 import Footer from '../footer/Footer';
 import CenteredContainer from './CenteredContainer';
+import Projects from '../projects/Projects';
 
 function PageLayout() {
   return (
@@ -42,9 +43,7 @@ function PageLayout() {
             />
           </CenteredContainer>
 
-          <CenteredContainer>
-            <div>Some awesome content</div>
-          </CenteredContainer>
+          <Projects />
         </main>
         <Footer />
       </div>
