@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
-import { MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  ChevronDownIcon,
+  MoonIcon,
+  SunIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
 import * as Dialog from '@radix-ui/react-dialog';
 import portrait from '../../images/portrait.jpg';
 import sections from '../../model/sections';
@@ -113,9 +118,10 @@ function NavBar() {
               <Dialog.Trigger asChild>
                 <button
                   type="button"
-                  className="rounded-full  bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
+                  className="font-md flex flex-row items-center rounded-full bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
                 >
                   Menu
+                  <ChevronDownIcon className="ml-2 h-3 w-3" />
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
