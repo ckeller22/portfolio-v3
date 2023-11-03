@@ -98,16 +98,23 @@ function NavBar() {
   return (
     <header className="flex">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
-        <div className="relative flex flex-row items-center justify-between px-4 py-2 sm:px-8 lg:px-12 ">
+        <div className="relative flex flex-row items-center justify-between px-4 py-3 sm:px-8 lg:px-12 ">
           <div className="flex flex-shrink-0 items-center">
-            {/* <img
-              className="h-12 w-12 rounded-full"
+            <img
+              className="h-12 w-12 rounded-full shadow-md ring-1 ring-zinc-900/5 dark:ring-zinc-300/20"
               src={portrait}
               alt="Your Company"
-            /> */}
+            />
+          </div>
+
+          <div className="flex flex-grow flex-row justify-end pr-4 sm:justify-center sm:pr-0">
+            {/* Mobile menu */}
             <Dialog.Root>
               <Dialog.Trigger asChild>
-                <button type="button" className="text-white">
+                <button
+                  type="button"
+                  className="rounded-full  bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
+                >
                   Menu
                 </button>
               </Dialog.Trigger>
@@ -115,7 +122,7 @@ function NavBar() {
                 <Dialog.Overlay asChild>
                   <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
                 </Dialog.Overlay>
-                <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+                <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
                   <div className="p-6">
                     <div className="flex flex-row justify-between">
                       Navigation
@@ -134,12 +141,13 @@ function NavBar() {
                 </Dialog.Content>
               </Dialog.Portal>
             </Dialog.Root>
-          </div>
-          <div>
-            <ul className="text-md flex flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+
+            {/* Nav List Desktop */}
+            <ul className="text-md hidden flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
               {navigationItems}
             </ul>
           </div>
+
           <div>
             <button
               data-testid="theme-button"
