@@ -2,6 +2,7 @@ import GenericText from '../shared/GenericText';
 import content from '../../data/content.json';
 import NavBar from '../nav/NavBar';
 import Footer from '../footer/Footer';
+import CenteredContainer from './CenteredContainer';
 
 function PageLayout() {
   return (
@@ -46,6 +47,10 @@ function PageLayout() {
               </div>
             </div>
           </div>
+
+          <CenteredContainer>
+            <div>Some awesome content</div>
+          </CenteredContainer>
         </main>
         <Footer />
       </div>
