@@ -1,5 +1,6 @@
 import * as Icon from 'react-feather';
 import work from '../../model/work';
+import CardContainer from '../shared/CardContainer';
 
 function DefaultEmployerImage() {
   return (
@@ -22,14 +23,14 @@ function DefaultEmployerImage() {
 
 function WorkCard() {
   return (
-    <div className="flex flex-col rounded-xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900 ">
+    <CardContainer>
       {/* Card Title */}
       <div className="mb-6 flex flex-row">
         <Icon.Briefcase className="themed-icon-filled" />
         <h2 className="themed-text-medium pl-4">Work</h2>
       </div>
 
-      {/* Work info card. */}
+      {/* Work info section. */}
       <ul className="flex flex-col space-y-4">
         {work.map((workData) => {
           return (
@@ -75,7 +76,7 @@ function WorkCard() {
           );
         })}
       </ul>
-    </div>
+    </CardContainer>
   );
 }
 

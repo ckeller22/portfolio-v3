@@ -2,16 +2,14 @@ import * as Icon from 'react-feather';
 import projects, { ProjectData } from '../../model/projects';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
+import CardContainer from '../shared/CardContainer';
 
 // type Props = {};
 
 function ProjectCards() {
   return projects.map((project: ProjectData) => {
     return (
-      <div
-        key={project.id}
-        className="flex flex-col rounded-xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900 "
-      >
+      <CardContainer key={project.id}>
         {/* Icons */}
         <div className="flex flex-row justify-between">
           <Icon.Folder className="themed-icon-filled h-6 w-6 " />
@@ -47,7 +45,7 @@ function ProjectCards() {
             })}
           </ul>
         </div>
-      </div>
+      </CardContainer>
     );
   });
 }

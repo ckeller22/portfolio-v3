@@ -4,7 +4,7 @@ import NavBar from '../nav/NavBar';
 import Footer from '../footer/Footer';
 import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
-import Work from '../work/WorkCard';
+import WorkCard from '../work/WorkCard';
 
 function PageLayout() {
   return (
@@ -41,7 +41,7 @@ function PageLayout() {
                 <GenericText className="mt-4" text={content.about4} />
               </div>
               <div>
-                <Work />
+                <WorkCard />
               </div>
             </div>
           </CenteredContainer>
