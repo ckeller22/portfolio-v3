@@ -1,10 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import {
-  ChevronDownIcon,
-  MoonIcon,
-  SunIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
+import * as Icon from 'react-feather';
 import * as Dialog from '@radix-ui/react-dialog';
 import portrait from '../../images/portrait.jpg';
 import sections, { SectionData } from '../../model/sections';
@@ -127,7 +122,7 @@ function NavBar() {
                   className="font-md flex flex-row items-center rounded-full bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
                 >
                   Menu
-                  <ChevronDownIcon className="ml-2 h-3 w-3" />
+                  <Icon.ChevronDown className="ml-2 h-3 w-3" />
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
@@ -139,7 +134,7 @@ function NavBar() {
                     <div className="text-md font-mediu flex flex-row justify-between">
                       Navigation
                       <Dialog.Close asChild>
-                        <XMarkIcon className="h-6 w-6" />
+                        <Icon.X className="h-6 w-6" />
                       </Dialog.Close>
                     </div>
                     <ul className="text-md flex flex-col divide-y divide-zinc-100 pt-4 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
@@ -165,9 +160,9 @@ function NavBar() {
               onClick={handleClick}
             >
               {currentTheme === Theme.Dark ? (
-                <MoonIcon className={iconClasses} />
+                <Icon.Moon className={iconClasses} />
               ) : (
-                <SunIcon className={iconClasses} />
+                <Icon.Sun className={iconClasses} />
               )}
             </button>
           </div>

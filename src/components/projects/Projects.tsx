@@ -11,6 +11,7 @@ function ProjectCards() {
         key={project.id}
         className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-4 dark:border-zinc-700/40 dark:bg-zinc-900 dark:text-zinc-300"
       >
+        {/* Icons */}
         <div className="flex flex-row justify-between">
           <Icon.Folder className="h-6 w-6" />
           <div className="flex flex-row space-x-2">
@@ -20,10 +21,23 @@ function ProjectCards() {
             >
               <Icon.GitHub />
             </a>
-            <Icon.ExternalLink className="" />
+            {project.liveURL && (
+              <a href={project.liveURL}>
+                <Icon.ExternalLink />
+              </a>
+            )}
           </div>
         </div>
-        {project.title}
+        <div className="flex h-full flex-col">
+          <h2>{project.title}</h2>
+          <p className="flex flex-grow">{project.description}</p>
+
+          <ul className="flex flex-row flex-wrap space-x-4">
+            {project.technologies.map((technology) => {
+              return <li className="">{technology}</li>;
+            })}
+          </ul>
+        </div>
       </div>
     );
   });
