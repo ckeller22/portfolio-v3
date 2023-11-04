@@ -12,10 +12,18 @@ export type ProjectData = {
 const projects: Array<ProjectData> = [
   {
     id: uuidv4(),
-    title: 'Portfolio Website v2',
-    description: 'This website, built using React and Tailwind.',
-    technologies: ['Javascript', 'React', 'Tailwind'],
+    title: 'Portfolio Website v3',
+    description: 'This website, built using Typescript, React, and Tailwind.',
+    technologies: ['TypeScript', 'React', 'Tailwind'],
     githubURL: 'https://github.com/ckeller22/portfolio-v2',
+    liveURL: null,
+  },
+  {
+    id: uuidv4(),
+    title: 'Portfolio Website v2',
+    description: 'Previous portfolio website, built using React and Tailwind.',
+    technologies: ['Javascript', 'React', 'Tailwind'],
+    githubURL: 'https://github.com/ckeller22/portfolio_v2',
     liveURL: null,
   },
   {
