@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .themed-text-base {
+    @apply text-base text-zinc-600 dark:text-zinc-400;
+  }
+
+  .themed-text-medium {
+    @apply font-medium text-zinc-800 dark:text-zinc-200;
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

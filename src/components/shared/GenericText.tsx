@@ -5,11 +5,7 @@ interface GenericTextProps extends AppProps {
 }
 
 function GenericText({ text, className = '' }: GenericTextProps) {
-  return (
-    <p className={`${className} text-base text-zinc-600 dark:text-zinc-400`}>
-      {text}
-    </p>
-  );
+  return <p className={`${className} themed-text-base`}>{text}</p>;
 }
 
 export default GenericText;

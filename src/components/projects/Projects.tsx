@@ -9,7 +9,7 @@ function ProjectCards() {
     return (
       <div
         key={project.id}
-        className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-4 dark:border-zinc-700/40 dark:bg-zinc-900 dark:text-zinc-300"
+        className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-4 dark:border-zinc-700/40 dark:bg-zinc-900 "
       >
         {/* Icons */}
         <div className="flex flex-row justify-between">
@@ -28,9 +28,11 @@ function ProjectCards() {
             )}
           </div>
         </div>
-        <div className="flex h-full flex-col">
-          <h2>{project.title}</h2>
-          <p className="flex flex-grow">{project.description}</p>
+        <div className="flex h-full flex-col pt-4">
+          <h2 className="themed-text-medium">{project.title}</h2>
+          <p className="themed-text-base flex flex-grow">
+            {project.description}
+          </p>
 
           <ul className="flex flex-row flex-wrap space-x-4">
             {project.technologies.map((technology) => {
