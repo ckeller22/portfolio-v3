@@ -28,6 +28,8 @@ function WorkCard() {
         <Icon.Briefcase className="themed-icon-filled" />
         <h2 className="themed-text-medium pl-4">Work</h2>
       </div>
+
+      {/* Work info card. */}
       <ul className="flex flex-col space-y-4">
         {work.map((workData) => {
           return (
@@ -63,6 +65,7 @@ function WorkCard() {
                   <ul className=" pl- space-y-2">
                     {workData.highlights &&
                       workData.highlights.map((highlight) => {
+                        // eslint-disable-next-line react/jsx-key
                         return <li>{highlight}</li>;
                       })}
                   </ul>
