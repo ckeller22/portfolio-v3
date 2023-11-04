@@ -1,4 +1,5 @@
 import amerisaveIcon from '../images/amerisave-icon.jpg';
+import content from '../data/content.json';
 
 export type WorkData = {
   id: string;
@@ -6,6 +7,7 @@ export type WorkData = {
   employer: string;
   position: string;
   duration: string;
+  highlights?: Array<string>;
 };
 
 const work: Array<WorkData> = [
@@ -15,6 +17,7 @@ const work: Array<WorkData> = [
     employer: 'AmeriSave Mortgage',
     position: 'Software Engineer II',
     duration: 'Feb 2022 - Oct 2023',
+    highlights: [...content.amerisaveHighlights],
   },
   {
     id: 'freelance',
