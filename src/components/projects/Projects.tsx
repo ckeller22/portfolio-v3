@@ -10,7 +10,7 @@ function ProjectCards() {
     return (
       <div
         key={project.id}
-        className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900 "
+        className="flex flex-col rounded-xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900 "
       >
         {/* Icons */}
         <div className="flex flex-row justify-between">
