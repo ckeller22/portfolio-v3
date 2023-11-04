@@ -34,9 +34,15 @@ function ProjectCards() {
             {project.description}
           </p>
 
-          <ul className="flex flex-row flex-wrap space-x-4">
+          <ul className="flex flex-row flex-wrap pt-6">
             {project.technologies.map((technology) => {
-              return <li className="">{technology}</li>;
+              return (
+                <li key={technology}>
+                  <span className="inline-flex items-center pr-2 text-zinc-400 dark:text-zinc-500">
+                    {technology}
+                  </span>
+                </li>
+              );
             })}
           </ul>
         </div>
