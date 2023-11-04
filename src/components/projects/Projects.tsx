@@ -9,21 +9,21 @@ function ProjectCards() {
     return (
       <div
         key={project.id}
-        className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-4 dark:border-zinc-700/40 dark:bg-zinc-900 "
+        className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900 "
       >
         {/* Icons */}
         <div className="flex flex-row justify-between">
-          <Icon.Folder className="h-6 w-6" />
+          <Icon.Folder className="themed-icon-filled h-6 w-6 " />
           <div className="flex flex-row space-x-2">
             <a
               href={project.githubURL}
               className="h-6 w-6 fill-current text-zinc-300"
             >
-              <Icon.GitHub />
+              <Icon.GitHub className="themed-icon" />
             </a>
             {project.liveURL && (
               <a href={project.liveURL}>
-                <Icon.ExternalLink />
+                <Icon.Link className="themed-icon" />
               </a>
             )}
           </div>

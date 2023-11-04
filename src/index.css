@@ -10,6 +10,14 @@
   .themed-text-medium {
     @apply font-medium text-zinc-800 dark:text-zinc-200;
   }
+
+  .themed-icon {
+    @apply stroke-zinc-400 dark:stroke-zinc-500;
+  }
+
+  .themed-icon-filled {
+    @apply fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500;
+  }
 }
 
 /* :root {
