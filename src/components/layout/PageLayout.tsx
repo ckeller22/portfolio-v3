@@ -4,6 +4,7 @@ import NavBar from '../nav/NavBar';
 import Footer from '../footer/Footer';
 import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
+import GenericHeading from '../shared/GenericHeading';
 
 function PageLayout() {
   return (
@@ -31,17 +32,15 @@ function PageLayout() {
             </div>
           </div>
 
-          <CenteredContainer>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hello World!
-            </h1>
+          {/* <CenteredContainer>
+            <GenericHeading text="Hello World!" />
             <GenericText
               className="mt-6"
               text={
                 "Her be relays to only the salesmen of worthy that being up do. Is the should or few normal of her she longer the attempt. Good which in brains written turn especially in for in there a and that experiments until deep odd was would was now each easy themselves, in be break a the be a go princesses everyone. See back necessary he it this customary a on goat, would be plans. The is herself is the if ticking fortune. Gone the and problem. Torn more in either borne my small I out perfected isn't that economics on the."
               }
             />
-          </CenteredContainer>
+          </CenteredContainer> */}
 
           <Projects />
         </main>
