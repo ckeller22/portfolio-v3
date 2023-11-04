@@ -32,15 +32,14 @@ function PageLayout() {
             </div>
           </div>
 
-          {/* <CenteredContainer>
-            <GenericHeading text="Hello World!" />
-            <GenericText
-              className="mt-6"
-              text={
-                "Her be relays to only the salesmen of worthy that being up do. Is the should or few normal of her she longer the attempt. Good which in brains written turn especially in for in there a and that experiments until deep odd was would was now each easy themselves, in be break a the be a go princesses everyone. See back necessary he it this customary a on goat, would be plans. The is herself is the if ticking fortune. Gone the and problem. Torn more in either borne my small I out perfected isn't that economics on the."
-              }
-            />
-          </CenteredContainer> */}
+          <CenteredContainer>
+            <div className="max-w-2xl">
+              <GenericText className="mt-4" text={content.about1} />
+              <GenericText className="mt-4" text={content.about2} />
+              <GenericText className="mt-4" text={content.about3} />
+              <GenericText className="mt-4" text={content.about4} />
+            </div>
+          </CenteredContainer>
 
           <Projects />
         </main>
