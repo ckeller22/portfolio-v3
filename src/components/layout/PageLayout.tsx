@@ -5,6 +5,7 @@ import Footer from '../footer/Footer';
 import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
 import WorkCard from '../work/WorkCard';
+import EducationCard from '../education/Education';
 
 function PageLayout() {
   return (
@@ -42,6 +43,9 @@ function PageLayout() {
               </div>
               <div>
                 <WorkCard />
+              </div>
+              <div>
+                <EducationCard />
               </div>
             </div>
           </CenteredContainer>
