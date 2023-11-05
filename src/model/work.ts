@@ -1,37 +1,31 @@
 import amerisaveIcon from '../images/amerisave-icon.jpg';
 import content from '../data/content.json';
-import wguLogo from '../images/wgu-logo.jpeg';
+import { CardInfoItemProps } from './props';
 
-export type WorkData = {
+export interface WorkData extends CardInfoItemProps {
   id: string;
-  image?: string;
-  employer: string;
-  position: string;
-  duration: string;
-  highlights?: Array<string>;
-};
+}
 
 const work: Array<WorkData> = [
   {
     id: 'amerisave',
-    image: amerisaveIcon,
-    employer: 'AmeriSave Mortgage',
-    position: 'Software Engineer II',
-    duration: 'Feb 2022 - Oct 2023',
-    highlights: [...content.amerisaveHighlights],
+    imageSource: amerisaveIcon,
+    title: { value: 'AmeriSave Mortgage', screenReaderTitle: 'Employer' },
+    subtitle: { value: 'Software Engineer II', screenReaderTitle: 'Position' },
+    time: { value: 'Feb 2022 - Oct 2023', screenReaderTitle: 'Dates' },
+    descriptionList: {
+      value: [...content.amerisaveHighlights],
+      screenReaderTitle: 'Highlights',
+    },
   },
   {
     id: 'freelance',
-    employer: 'Freelance',
-    position: 'Full-stack Software Engineer',
-    duration: 'April 2020 - Present',
-  },
-  {
-    id: 'wgu',
-    image: wguLogo,
-    employer: 'Western Governors University',
-    position: "Bachelor's of Science, Software Development",
-    duration: 'Jan 2020',
+    title: { value: 'Freelance', screenReaderTitle: 'Employer' },
+    subtitle: {
+      value: 'Full-stack Software Engineer',
+      screenReaderTitle: 'Employer',
+    },
+    time: { value: 'April 2020 - Present', screenReaderTitle: 'Employer' },
   },
 ];
 

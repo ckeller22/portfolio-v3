@@ -1,5 +1,6 @@
 import { AppProps } from '../../model/props';
 import CardTitle from './CardTitle';
+import CardInfoItem from './CardInfoItem';
 
 interface CardContainerProps extends AppProps {}
 
@@ -12,5 +13,6 @@ function CardContainer({ children }: CardContainerProps) {
 }
 
 CardContainer.Title = CardTitle;
+CardContainer.InfoItem = CardInfoItem;
 
 export default CardContainer;
