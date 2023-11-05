@@ -1,3 +1,4 @@
+import * as Icon from 'react-feather';
 import work from '../../model/work';
 import Card from '../shared/CardContainer';
 
@@ -20,6 +21,16 @@ function WorkCard() {
           );
         })}
       </ul>
+
+      <a
+        href="/assets/christopher-keller-resume-10-26-2023.pdf"
+        download
+        className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-zinc-50 px-2 py-3 font-medium text-zinc-900 dark:bg-zinc-800/90 dark:text-zinc-300"
+        type="button"
+      >
+        <span>Download Resume</span>
+        <Icon.ArrowDown className="h-4 w-4 stroke-zinc-400 dark:stroke-zinc-400" />
+      </a>
     </Card>
   );
 }
