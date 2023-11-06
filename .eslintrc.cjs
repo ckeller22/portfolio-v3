@@ -35,6 +35,8 @@ module.exports = {
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
     'arrow-body-style': ['error', 'always'],
+    // Default props in functional components will be deprecated "eventually"
+    'react/require-default-props': ['error', { functions: 'defaultArguments' }],
     'react/react-in-jsx-scope': 0,
     'react-refresh/only-export-components': [
       'warn',

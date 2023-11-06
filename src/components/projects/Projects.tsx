@@ -9,7 +9,7 @@ import Card from '../shared/CardContainer';
 function ProjectCards() {
   return projects.map((project: ProjectData) => {
     return (
-      <Card key={project.id}>
+      <Card key={project.id} useHover>
         {/* Icons */}
         <div className="flex flex-row justify-between">
           <Icon.Folder className="themed-icon-filled h-6 w-6 " />
