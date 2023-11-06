@@ -54,7 +54,7 @@ function Projects() {
   return (
     <CenteredContainer>
       <GenericHeading text="Projects" />
-      <div className="mt-6 flex flex-col gap-5 md:grid md:auto-rows-auto md:grid-cols-2 lg:grid-cols-2">
+      <div className="mt-6 flex flex-col gap-5 md:grid md:auto-rows-fr lg:grid-cols-2">
         <ProjectCards />
       </div>
     </CenteredContainer>
