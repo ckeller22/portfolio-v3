@@ -1,35 +1,31 @@
-import { v4 as uuidv4 } from 'uuid';
-import LinkedInIcon from '../components/icons/LinkedInIcon';
-import GitHubIcon from '../components/icons/GitHubIcon';
-import TwitterIcon from '../components/icons/TwitterIcon';
-
-type IconType = typeof GitHubIcon | typeof LinkedInIcon | typeof TwitterIcon;
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 type LinkData = {
   id: string;
   name: string;
   url: string;
-  svg: React.ReactElement<IconType>;
+  icon: any;
 };
 
 const links: Array<LinkData> = [
   {
-    id: uuidv4(),
+    id: 'github',
     name: 'GitHub',
     url: 'https://github.com/ckeller22',
-    svg: <GitHubIcon />,
+    icon: faGithub,
   },
   {
-    id: uuidv4(),
+    id: 'linkedin',
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/ckeller22/',
-    svg: <LinkedInIcon />,
+    icon: faLinkedin,
   },
   {
-    id: uuidv4(),
-    name: 'Twitter',
-    url: 'https://twitter.com/the_chrus',
-    svg: <TwitterIcon />,
+    id: 'email',
+    name: 'Email',
+    url: 'mailto:chris.keller.dev@gmail.com',
+    icon: faEnvelope,
   },
 ];
 

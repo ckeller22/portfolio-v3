@@ -7,8 +7,7 @@ import Projects from '../projects/Projects';
 import WorkCard from '../work/WorkCard';
 import EducationCard from '../education/Education';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import links from '../../model/links';
 
 function PageLayout() {
   return (
@@ -33,33 +32,19 @@ function PageLayout() {
                   <GenericText className="mt-6" text={content.intro} />
 
                   <ul className="mt-6 flex flex-row space-x-4">
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon
-                          icon={faGithub}
-                          size="xl"
-                          className="themed-link-icon"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon
-                          icon={faLinkedin}
-                          size="xl"
-                          className="themed-link-icon"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FontAwesomeIcon
-                          icon={faEnvelope}
-                          size="xl"
-                          className="themed-link-icon"
-                        />
-                      </a>
-                    </li>
+                    {links.map((link) => {
+                      return (
+                        <li key={link.id}>
+                          <a href={link.url}>
+                            <FontAwesomeIcon
+                              icon={link.icon}
+                              size="xl"
+                              className="themed-link-icon"
+                            />
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
