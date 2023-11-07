@@ -4,6 +4,26 @@ import links from '../../model/links';
 import content from '../../data/content.json';
 import GenericText from '../shared/GenericText';
 
+function LinkItems() {
+  return (
+    <ul className="mt-6 flex flex-row space-x-4">
+      {links.map((link) => {
+        return (
+          <li key={link.id}>
+            <a href={link.url}>
+              <FontAwesomeIcon
+                icon={link.icon}
+                size="xl"
+                className="themed-link-icon"
+              />
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function Intro() {
   return (
     <CenteredContainer className="my-36">
@@ -12,22 +32,7 @@ function Intro() {
           {content.introHeader}
         </h1>
         <GenericText className="mt-6" text={content.intro} />
-
-        <ul className="mt-6 flex flex-row space-x-4">
-          {links.map((link) => {
-            return (
-              <li key={link.id}>
-                <a href={link.url}>
-                  <FontAwesomeIcon
-                    icon={link.icon}
-                    size="xl"
-                    className="themed-link-icon"
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <LinkItems />
       </div>
     </CenteredContainer>
   );
