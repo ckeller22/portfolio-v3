@@ -11,12 +11,16 @@ function PageLayout() {
       <FixedBackdrop />
 
       <div className="relative flex w-full flex-col">
-        <NavBar />
+        <header className="flex-auto">
+          <NavBar />
+        </header>
+
         <main className="flex-auto">
           <Intro />
           <About />
           <Projects />
         </main>
+
         <Footer />
       </div>
     </div>
