@@ -6,6 +6,9 @@ import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
 import WorkCard from '../work/WorkCard';
 import EducationCard from '../education/Education';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function PageLayout() {
   return (
@@ -20,7 +23,7 @@ function PageLayout() {
       <div className="relative flex w-full flex-col">
         <NavBar />
         <main className="flex-auto">
-          <div className="mt-9 sm:px-8">
+          <div className="mb-36 mt-36 sm:px-8">
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="px-4 sm:px-8 lg:px-12">
                 <div className="max-w-2xl">
@@ -28,6 +31,36 @@ function PageLayout() {
                     {content.introHeader}
                   </h1>
                   <GenericText className="mt-6" text={content.intro} />
+
+                  <ul className="mt-6 flex flex-row space-x-4">
+                    <li>
+                      <a href="#">
+                        <FontAwesomeIcon
+                          icon={faGithub}
+                          size="xl"
+                          className="themed-icon"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <FontAwesomeIcon
+                          icon={faLinkedin}
+                          size="xl"
+                          className="themed-icon"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <FontAwesomeIcon
+                          icon={faEnvelope}
+                          size="xl"
+                          className="themed-icon"
+                        />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -51,7 +84,7 @@ function PageLayout() {
 
           <Projects />
         </main>
-        <Footer />
+        <Footer />d
       </div>
     </div>
   );
