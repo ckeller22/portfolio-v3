@@ -9,7 +9,7 @@ import EducationCard from '../education/Education';
 
 function PageLayout() {
   return (
-    <div className="flex h-full bg-zinc-50 dark:bg-black ">
+    <div className="flex h-full bg-zinc-50 transition dark:bg-black">
       {/* Static centered container. */}
       <div className="fixed inset-0 flex justify-center sm:px-8">
         <div className="flex w-full max-w-7xl lg:px-8">
@@ -41,12 +41,11 @@ function PageLayout() {
                 <GenericText className="mt-4" text={content.about3} />
                 <GenericText className="mt-4" text={content.about4} />
               </div>
-              <div>
+              <div className="flex flex-col gap-y-6">
                 <WorkCard />
-              </div>
-              <div>
                 <EducationCard />
               </div>
+              <div></div>
             </div>
           </CenteredContainer>
 
