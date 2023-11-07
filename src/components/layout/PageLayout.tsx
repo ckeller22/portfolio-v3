@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GenericText from '../shared/GenericText';
 import content from '../../data/content.json';
 import NavBar from '../nav/NavBar';
@@ -7,7 +6,7 @@ import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
 import WorkCard from '../work/WorkCard';
 import EducationCard from '../education/Education';
-import links from '../../model/links';
+import Intro from '../intro/Intro';
 
 function PageLayout() {
   return (
@@ -22,34 +21,7 @@ function PageLayout() {
       <div className="relative flex w-full flex-col">
         <NavBar />
         <main className="flex-auto">
-          <div className="mb-36 mt-36 sm:px-8">
-            <div className="mx-auto w-full max-w-7xl lg:px-8">
-              <div className="px-4 sm:px-8 lg:px-12">
-                <div className="max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                    {content.introHeader}
-                  </h1>
-                  <GenericText className="mt-6" text={content.intro} />
-
-                  <ul className="mt-6 flex flex-row space-x-4">
-                    {links.map((link) => {
-                      return (
-                        <li key={link.id}>
-                          <a href={link.url}>
-                            <FontAwesomeIcon
-                              icon={link.icon}
-                              size="xl"
-                              className="themed-link-icon"
-                            />
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Intro />
 
           <CenteredContainer>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
