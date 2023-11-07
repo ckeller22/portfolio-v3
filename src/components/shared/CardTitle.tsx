@@ -8,14 +8,14 @@ type CardTitleProps = {
 
 function CardTitle({ text, faIcon }: CardTitleProps) {
   return (
-    <div className="mb-6 flex flex-row">
+    <div className="mb-6 flex flex-row items-center">
       <FontAwesomeIcon
         icon={faIcon}
         className="themed-icon"
         size="lg"
         pull="left"
       />
-      <h2 className="themed-text-medium pl-4">{text}</h2>
+      <h2 className="themed-text-medium pl-4 capitalize">{text}</h2>
     </div>
   );
 }
