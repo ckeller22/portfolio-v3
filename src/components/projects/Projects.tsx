@@ -1,9 +1,7 @@
-import * as Icon from 'react-feather';
 import projects, { ProjectData } from '../../model/projects';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
 import Card from '../shared/CardContainer';
-import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUpRightFromSquare,
