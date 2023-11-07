@@ -3,6 +3,13 @@ import projects, { ProjectData } from '../../model/projects';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
 import Card from '../shared/CardContainer';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faUpRightFromSquare,
+  faCodeBranch,
+} from '@fortawesome/free-solid-svg-icons';
+import { faFolder } from '@fortawesome/free-regular-svg-icons';
 
 // type Props = {};
 
@@ -12,17 +19,18 @@ function ProjectCards() {
       <Card key={project.id} useHover>
         {/* Icons */}
         <div className="flex flex-row justify-between">
-          <Icon.Folder className="themed-icon-filled h-6 w-6 " />
+          <FontAwesomeIcon icon={faFolder} size="xl" className="themed-icon" />
           <div className="flex flex-row space-x-2">
-            <a
-              href={project.githubURL}
-              className="h-6 w-6 fill-current text-zinc-300"
-            >
-              <Icon.GitHub className="themed-icon" />
+            <a href={project.githubURL} className="">
+              <FontAwesomeIcon
+                icon={faCodeBranch}
+                size="lg"
+                className="themed-link-icon"
+              />
             </a>
             {project.liveURL && (
-              <a href={project.liveURL}>
-                <Icon.Link className="themed-icon" />
+              <a href={project.liveURL} className="themed-link-icon">
+                <FontAwesomeIcon icon={faUpRightFromSquare} size="lg" />
               </a>
             )}
           </div>
