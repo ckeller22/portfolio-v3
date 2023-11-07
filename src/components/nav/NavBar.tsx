@@ -1,15 +1,20 @@
 import { useCallback, useEffect, useState } from 'react';
-import * as Icon from 'react-feather';
 import * as Dialog from '@radix-ui/react-dialog';
 import portrait from '../../images/portrait.jpg';
 import sections, { SectionData } from '../../model/sections';
-
+import {
+  faCloudMoon,
+  faChevronDown,
+  faX,
+} from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-regular-svg-icons';
 import {
   DEFAULT_THEME,
   LOCAL_STORAGE_THEME_KEY,
   Theme,
 } from '../../model/theme';
 import NavigationItem from './NavigationItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);
@@ -83,8 +88,6 @@ function NavBar() {
     toggleTheme();
   };
 
-  const iconClasses = 'h-6 w-6';
-
   const desktopNavigationItems = sections.map((section: SectionData) => {
     return (
       <NavigationItem
@@ -122,7 +125,10 @@ function NavBar() {
                     className="font-md flex flex-row items-center rounded-full bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
                   >
                     Menu
-                    <Icon.ChevronDown className="ml-2 h-3 w-3" />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className="ml-2 h-3 w-3"
+                    />
                   </button>
                 </Dialog.Trigger>
                 <Dialog.Portal>
@@ -134,7 +140,7 @@ function NavBar() {
                       <div className="text-md font-mediu flex flex-row justify-between">
                         Navigation
                         <Dialog.Close asChild>
-                          <Icon.X className="h-6 w-6" />
+                          <FontAwesomeIcon icon={faX} className="h-6 w-6" />
                         </Dialog.Close>
                       </div>
                       <ul className="text-md flex flex-col divide-y divide-zinc-100 pt-4 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
@@ -158,9 +164,9 @@ function NavBar() {
                 onClick={handleClick}
               >
                 {currentTheme === Theme.Dark ? (
-                  <Icon.Moon className={iconClasses} />
+                  <FontAwesomeIcon icon={faCloudMoon} size="xl" />
                 ) : (
-                  <Icon.Sun className={iconClasses} />
+                  <FontAwesomeIcon icon={faSun} size="xl" />
                 )}
               </button>
             </div>

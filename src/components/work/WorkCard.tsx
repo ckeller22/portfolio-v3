@@ -1,7 +1,8 @@
-import * as Icon from 'react-feather';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import work from '../../model/work';
 import Card from '../shared/CardContainer';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 function WorkCard() {
   return (
@@ -31,7 +32,10 @@ function WorkCard() {
         type="button"
       >
         <span>Download Resume</span>
-        <Icon.ArrowDown className="h-4 w-4 stroke-zinc-400 dark:stroke-zinc-400 dark:group-hover:stroke-zinc-300" />
+        <FontAwesomeIcon
+          icon={faDownload}
+          className="text-zinc-400 dark:text-zinc-400 dark:group-hover:text-zinc-300"
+        />
       </a>
     </Card>
   );
