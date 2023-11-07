@@ -13,6 +13,7 @@ const work: Array<WorkData> = [
     title: { value: 'AmeriSave Mortgage', screenReaderTitle: 'Employer' },
     subtitle: { value: 'Software Engineer II', screenReaderTitle: 'Position' },
     time: { value: 'Feb 2022 - Oct 2023', screenReaderTitle: 'Dates' },
+    url: 'https://www.amerisave.com/',
     descriptionList: {
       value: [...content.amerisaveHighlights],
       screenReaderTitle: 'Highlights',

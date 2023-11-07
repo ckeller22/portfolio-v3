@@ -32,6 +32,7 @@ export interface CardInfoItemProps {
   subtitle: TextWithScreenReaderTitle;
   time: TextWithScreenReaderTitle;
   imageSource?: string;
+  url?: string;
   descriptionList?: {
     value: Array<string>;
     screenReaderTitle: string;

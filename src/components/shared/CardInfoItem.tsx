@@ -23,6 +23,7 @@ function CardInfoItem({
   title,
   subtitle,
   time,
+  url = undefined,
   descriptionList = undefined,
   imageSource = undefined,
 }: CardInfoItemProps) {
@@ -42,7 +43,16 @@ function CardInfoItem({
       <dl className="ml-4 flex flex-grow flex-col">
         <dt className="sr-only">{title.screenReaderTitle}</dt>
         <dd className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {title.value}
+          {url ? (
+            <a
+              href={url}
+              className="transition hover:text-teal-500 hover:underline dark:hover:text-teal-400"
+            >
+              {title.value}
+            </a>
+          ) : (
+            title.value
+          )}
         </dd>
         <div className="mb-2 flex flex-row justify-between">
           <dt className="sr-only">{subtitle.screenReaderTitle}</dt>

@@ -16,6 +16,7 @@ function WorkCard() {
               title={workData.title}
               subtitle={workData.subtitle}
               time={workData.time}
+              url={workData.url}
               descriptionList={workData.descriptionList}
               imageSource={workData.imageSource}
             />

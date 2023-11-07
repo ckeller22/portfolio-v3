@@ -15,6 +15,7 @@ function Education() {
               title={educationData.title}
               subtitle={educationData.subtitle}
               time={educationData.time}
+              url={educationData.url}
               descriptionList={educationData.descriptionList}
               imageSource={educationData.imageSource}
             />

@@ -18,6 +18,7 @@ const education: Array<EducationData> = [
       screenReaderTitle: 'Degree',
     },
     time: { value: 'Jan 2020', screenReaderTitle: 'Date Graduated' },
+    url: 'https://www.wgu.edu/',
   },
 ];
 
