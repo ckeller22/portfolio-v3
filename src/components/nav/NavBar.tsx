@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import portrait from '../../images/portrait.jpg';
-import sections, { SectionData } from '../../model/sections';
 import { faMoon, faChevronDown, faX } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import portrait from '../../images/portrait.jpg';
+import sections, { SectionData } from '../../model/sections';
 import {
   DEFAULT_THEME,
   LOCAL_STORAGE_THEME_KEY,
   Theme,
 } from '../../model/theme';
 import NavigationItem from './NavigationItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);

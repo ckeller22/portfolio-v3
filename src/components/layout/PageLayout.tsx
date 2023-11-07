@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GenericText from '../shared/GenericText';
 import content from '../../data/content.json';
 import NavBar from '../nav/NavBar';
@@ -6,7 +7,6 @@ import CenteredContainer from './CenteredContainer';
 import Projects from '../projects/Projects';
 import WorkCard from '../work/WorkCard';
 import EducationCard from '../education/Education';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import links from '../../model/links';
 
 function PageLayout() {
@@ -63,7 +63,7 @@ function PageLayout() {
                 <WorkCard />
                 <EducationCard />
               </div>
-              <div></div>
+              <div />
             </div>
           </CenteredContainer>
 

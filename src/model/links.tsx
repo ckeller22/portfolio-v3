@@ -1,11 +1,11 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 type LinkData = {
   id: string;
   name: string;
   url: string;
-  icon: any;
+  icon: IconDefinition;
 };
 
 const links: Array<LinkData> = [
