@@ -38,7 +38,7 @@ function PageLayout() {
                         <FontAwesomeIcon
                           icon={faGithub}
                           size="xl"
-                          className="themed-icon"
+                          className="themed-link-icon"
                         />
                       </a>
                     </li>
@@ -47,7 +47,7 @@ function PageLayout() {
                         <FontAwesomeIcon
                           icon={faLinkedin}
                           size="xl"
-                          className="themed-icon"
+                          className="themed-link-icon"
                         />
                       </a>
                     </li>
@@ -56,7 +56,7 @@ function PageLayout() {
                         <FontAwesomeIcon
                           icon={faEnvelope}
                           size="xl"
-                          className="themed-icon"
+                          className="themed-link-icon"
                         />
                       </a>
                     </li>

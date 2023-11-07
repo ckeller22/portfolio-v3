@@ -1,11 +1,12 @@
 import * as Icon from 'react-feather';
 import work from '../../model/work';
 import Card from '../shared/CardContainer';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 
 function WorkCard() {
   return (
     <Card>
-      <Card.Title iconName="Briefcase" text="Work" />
+      <Card.Title faIcon={faBriefcase} text="Work" />
 
       <ul className="flex flex-col space-y-4">
         {work.map((workData) => {
