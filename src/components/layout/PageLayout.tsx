@@ -8,6 +8,7 @@ import WorkCard from '../work/WorkCard';
 import EducationCard from '../education/Education';
 import Intro from '../intro/Intro';
 import FixedBackdrop from './FixedBackdrop';
+import portrait from '../../images/portrait.jpg';
 
 function PageLayout() {
   return (
@@ -24,13 +25,14 @@ function PageLayout() {
                 <GenericText className="mt-4" text={content.about1} />
                 <GenericText className="mt-4" text={content.about2} />
                 <GenericText className="mt-4" text={content.about3} />
-                <GenericText className="mt-4" text={content.about2} />
-                <GenericText className="mt-4" text={content.about2} />
-                <GenericText className="mt-4" text={content.about2} />
+                <GenericText className="mt-4" text={content.about4} />
               </div>
-              <div className="flex flex-col gap-y-6">
-                <WorkCard />
-                <EducationCard />
+              <div className="flex flex-col items-center lg:pl-20">
+                <img
+                  src={portrait}
+                  alt=""
+                  className="aspect-square max-w-sm rounded-2xl "
+                />
               </div>
               <div />
             </div>
