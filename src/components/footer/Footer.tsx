@@ -39,9 +39,11 @@ function Footer() {
       <div className="sm:px-8">
         <div className="mx-auto w-full max-w-7xl lg:px-8">
           <div className="border-t border-zinc-100 px-4 dark:border-zinc-700/40 sm:px-8 lg:px-12">
-            <div className="flex flex-col items-center justify-center pb-16 pt-8 sm:flex-row sm:justify-between">
-              <NavList />
-              <FooterMetadata />
+            <div className="mx-auto max-w-2xl lg:max-w-5xl">
+              <div className="flex flex-col items-center justify-center pb-16 pt-8 sm:flex-row sm:justify-between">
+                <NavList />
+                <FooterMetadata />
+              </div>
             </div>
           </div>
         </div>

@@ -103,7 +103,7 @@ function NavBar() {
 
   return (
     <CenteredContainer>
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-row items-center justify-between pt-6">
         <div className="flex flex-shrink-0 items-center">
           <img
             className="h-10 w-10 rounded-full shadow-md ring-1 ring-zinc-900/5 dark:ring-zinc-300/20"
