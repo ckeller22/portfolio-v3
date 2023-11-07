@@ -6,11 +6,12 @@ import portrait from '../../images/portrait.jpg';
 
 function About() {
   return (
-    <CenteredContainer>
+    <CenteredContainer className="">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="col-span-1">
           <GenericHeading text="About Me" />
-          <GenericText className="" text={content.about1} />
+          <GenericText className="mt-6" text={content.intro} />
+          <GenericText className="mt-4" text={content.about1} />
           <GenericText className="mt-4" text={content.about2} />
           <GenericText className="mt-4" text={content.about3} />
           <GenericText className="mt-4" text={content.about4} />

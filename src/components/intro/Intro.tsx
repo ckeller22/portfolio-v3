@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CenteredContainer from '../layout/CenteredContainer';
 import links from '../../model/links';
 import content from '../../data/content.json';
-import GenericText from '../shared/GenericText';
 
 function LinkItems() {
   return (
@@ -13,7 +12,7 @@ function LinkItems() {
             <a href={link.url}>
               <FontAwesomeIcon
                 icon={link.icon}
-                size="xl"
+                size="lg"
                 className="themed-link-icon"
               />
             </a>
@@ -31,7 +30,6 @@ function Intro() {
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           {content.introHeader}
         </h1>
-        <GenericText className="mt-6" text={content.intro} />
         <LinkItems />
       </div>
     </CenteredContainer>

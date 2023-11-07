@@ -1,13 +1,13 @@
-import projects, { ProjectData } from '../../model/projects';
-import CenteredContainer from '../layout/CenteredContainer';
-import GenericHeading from '../shared/GenericHeading';
-import Card from '../shared/CardContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUpRightFromSquare,
   faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-regular-svg-icons';
+import projects, { ProjectData } from '../../model/projects';
+import CenteredContainer from '../layout/CenteredContainer';
+import GenericHeading from '../shared/GenericHeading';
+import Card from '../shared/CardContainer';
 
 // type Props = {};
 
@@ -58,7 +58,7 @@ function ProjectCards() {
 
 function Projects() {
   return (
-    <CenteredContainer>
+    <CenteredContainer className="">
       <GenericHeading text="Projects" />
       <div className="mt-6 flex flex-col gap-5 md:grid md:auto-rows-fr lg:grid-cols-2">
         <ProjectCards />
