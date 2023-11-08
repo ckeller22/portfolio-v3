@@ -61,10 +61,14 @@ function CardInfoItem({
           <dd className="text-xs text-zinc-500 dark:text-zinc-400">
             {subtitle.value}
           </dd>
-          <dt className="sr-only">{time.screenReaderTitle}</dt>
-          <dd className="text-right text-xs text-zinc-400 dark:text-zinc-500">
-            {time.value}
-          </dd>
+          {time && (
+            <>
+              <dt className="sr-only">{time.screenReaderTitle}</dt>
+              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                {time.value}
+              </dd>
+            </>
+          )}
         </div>
         {descriptionList && (
           <>

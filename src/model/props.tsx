@@ -30,7 +30,7 @@ export type TextWithScreenReaderTitle = {
 export interface CardInfoItemProps {
   title: TextWithScreenReaderTitle;
   subtitle: TextWithScreenReaderTitle;
-  time: TextWithScreenReaderTitle;
+  time?: TextWithScreenReaderTitle;
   imageSource?: string;
   url?: string;
   descriptionList?: {

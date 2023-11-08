@@ -1,4 +1,4 @@
-import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import { faAward } from '@fortawesome/free-solid-svg-icons';
 import NavBar from '../nav/NavBar';
 import Footer from '../footer/Footer';
 import Projects from '../projects/Projects';
@@ -9,6 +9,7 @@ import CenteredContainer from './CenteredContainer';
 import WorkCard from '../work/WorkCard';
 import Education from '../education/Education';
 import Card from '../shared/CardContainer';
+import certifications from '../../model/certifications';
 
 function PageLayout() {
   return (
@@ -28,11 +29,25 @@ function PageLayout() {
               <div className="space-y-5">
                 <WorkCard />
               </div>
-              <div>
-                <Card>
-                  <Card.Title faIcon={faScrewdriverWrench} text="Skills" />
-                </Card>
+              <div className="flex flex-col gap-y-5">
                 <Education />
+                <Card>
+                  <Card.Title faIcon={faAward} text="Certifications" />
+
+                  <ul className="flex flex-col space-y-4">
+                    {certifications.map((certificationData) => {
+                      return (
+                        <Card.InfoItem
+                          key={certificationData.id}
+                          title={certificationData.title}
+                          subtitle={certificationData.subtitle}
+                          url={certificationData.url}
+                          imageSource={certificationData.imageSource}
+                        />
+                      );
+                    })}
+                  </ul>
+                </Card>
               </div>
             </div>
           </CenteredContainer>
