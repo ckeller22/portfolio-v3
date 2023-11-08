@@ -1,3 +1,4 @@
+import Element from 'react-scroll/modules/components/Element';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
 import GenericText from '../shared/GenericText';
@@ -7,6 +8,7 @@ import portrait from '../../images/portrait.jpg';
 function About() {
   return (
     <CenteredContainer>
+      <Element name="about-section" />
       <GenericHeading text="Hello World!" />
       <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-x-10">
         <div>

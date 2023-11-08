@@ -4,6 +4,7 @@ import {
   faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-regular-svg-icons';
+import Element from 'react-scroll/modules/components/Element';
 import projects, { ProjectData } from '../../model/projects';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
@@ -58,6 +59,7 @@ function ProjectCards() {
 function Projects() {
   return (
     <CenteredContainer className="">
+      <Element name="projects-section" />
       <GenericHeading text="Projects" />
       <div className="flex flex-col gap-5 md:grid md:auto-rows-fr lg:grid-cols-2">
         <ProjectCards />
