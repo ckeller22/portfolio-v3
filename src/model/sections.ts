@@ -9,12 +9,12 @@ const sections: Array<SectionData> = [
     name: 'About',
   },
   {
-    id: 'projects-section',
-    name: 'Projects',
-  },
-  {
     id: 'experience-section',
     name: 'Experience',
+  },
+  {
+    id: 'projects-section',
+    name: 'Projects',
   },
   {
     id: 'resume-section',

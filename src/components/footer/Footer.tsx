@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import sections from '../../model/sections';
 
 function NavigationItems() {
@@ -5,12 +6,17 @@ function NavigationItems() {
     <>
       {sections.map((section) => {
         return (
-          <li
-            className="cursor-pointer transition hover:text-teal-400"
+          <Link
+            to={section.id}
+            smooth
+            duration={500}
+            offset={-20}
             key={section.id}
           >
-            <button type="button">{section.name}</button>
-          </li>
+            <li className="cursor-pointer transition hover:text-teal-400">
+              <button type="button">{section.name}</button>
+            </li>
+          </Link>
         );
       })}
     </>
