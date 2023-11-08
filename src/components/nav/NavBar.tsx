@@ -4,6 +4,7 @@ import { faMoon, faChevronDown, faX } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { animateScroll } from 'react-scroll';
+import { debounce } from 'lodash';
 import portrait from '../../images/portrait.jpg';
 import sections, { SectionData } from '../../model/sections';
 import {
@@ -15,47 +16,36 @@ import NavigationItem from './NavigationItem';
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Define the scroll handler
-    const handleScroll = () => {
+    const handleScroll = debounce(() => {
       const currentScrollPosition = window.scrollY;
+      const scrollDifference = prevScrollPosition - currentScrollPosition;
 
-      // Calculate the scroll difference
-      const scrollDifference = prevScrollPos - currentScrollPosition;
-
-      // Determine if the user has scrolled up more than 20 pixels
       const hasScrolledUpSignificantly =
-        prevScrollPos > currentScrollPosition && scrollDifference > 20;
+        prevScrollPosition > currentScrollPosition && scrollDifference > 20;
 
-      // Determine if the user is near the top of the page
       const isNearTopOfPage = currentScrollPosition < 10;
 
-      // The navbar should be visible if the user has scrolled up significantly or is near the top of the page
       const shouldNavbarBeVisible =
         hasScrolledUpSignificantly || isNearTopOfPage;
 
-      // If the navbar visibility state needs to be updated, do so
       if (isVisible !== shouldNavbarBeVisible) {
         setIsVisible(shouldNavbarBeVisible);
       }
 
-      // Update the previous scroll position state
-      setPrevScrollPos(currentScrollPosition);
+      setPrevScrollPosition(currentScrollPosition);
+    }, 100); // Debounce time in milliseconds
 
-      console.log(isVisible);
-    };
-
-    // Attach the scroll handler
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup function to remove the scroll handler when the component unmounts
     return () => {
+      handleScroll.cancel(); // Cancel any pending execution of handleScroll
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos, isVisible]); // Only re-run the effect if prevScrollPos or isVisible changes
+  }, [prevScrollPosition, isVisible]);
 
   // Needs to be memoized to prevent infinite renders.
   const updateTheme = useCallback((theme: Theme) => {
@@ -154,7 +144,11 @@ function NavBar() {
   return (
     // The following divs replicate the structure of CenteredContainer
     // but with support for fixed positioning.
-    <div className="fixed left-0 right-0 z-10 mx-auto w-full max-w-7xl p-4 lg:px-8">
+    <div
+      className={`${
+        isVisible ? 'visible' : ''
+      } nav-container fixed left-0 right-0 z-10 mx-auto w-full max-w-7xl py-4 lg:px-8`}
+    >
       <div className="mx-4 sm:mx-8 lg:mx-12">
         <div className="relative mx-auto max-w-2xl lg:max-w-5xl">
           <div className="flex flex-row items-center justify-between">

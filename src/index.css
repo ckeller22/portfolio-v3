@@ -22,6 +22,15 @@
   .themed-icon-filled {
     @apply fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500;
   }
+
+  .nav-container {
+    top: -100px;
+    transition: top 0.35s;
+  }
+
+  .nav-container.visible {
+    top: 0;
+  }
 }
 
 /* :root {
