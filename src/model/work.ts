@@ -31,6 +31,10 @@ const work: Array<WorkData> = [
       screenReaderTitle: 'Employer',
     },
     time: { value: 'April 2020 - Present', screenReaderTitle: 'Employer' },
+    technologiesList: {
+      value: [...content.freelanceTechnologies],
+      screenReaderTitle: 'Technologies',
+    },
   },
 ];
 

@@ -1,5 +1,6 @@
 import { CardInfoItemProps } from './props';
 import wguIcon from '../images/wgu-logo.jpeg';
+import content from '../data/content.json';
 
 export interface EducationData extends CardInfoItemProps {
   id: string;
@@ -19,6 +20,10 @@ const education: Array<EducationData> = [
     },
     time: { value: 'Jan 2020', screenReaderTitle: 'Date Graduated' },
     url: 'https://www.wgu.edu/',
+    technologiesList: {
+      value: [...content.wguTechnologies],
+      screenReaderTitle: 'Technologies',
+    },
   },
 ];
 

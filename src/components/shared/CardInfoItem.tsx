@@ -86,7 +86,7 @@ function CardInfoItem({
           <>
             <dt className="sr-only">{technologiesList.screenReaderTitle}</dt>
             <dd>
-              <ul className="flex flex-row flex-wrap gap-2">
+              <ul className="mt-2 flex flex-row flex-wrap gap-2">
                 {technologiesList.value.map((tech) => {
                   return (
                     // eslint-disable-next-line react/jsx-key

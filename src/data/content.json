@@ -16,12 +16,22 @@
     "TypeScript",
     "Vue",
     "Quasar",
+    "React",
     "Java",
     "Spring Boot",
     "MSSQL",
     "Fastify",
     "Azure",
-    "Ractive",
-    "ColdFusion"
-  ]
+    "Ractive"
+  ],
+  "freelanceTechnologies": [
+    "React",
+    "Tailwind",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "PHP",
+    "Python"
+  ],
+  "wguTechnologies": ["Java", "JavaFX", "JavaScript", "MySQL"]
 }

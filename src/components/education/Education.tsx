@@ -1,6 +1,6 @@
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import Card from '../shared/CardContainer';
 import education from '../../model/education';
-import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 function Education() {
   return (
@@ -17,6 +17,7 @@ function Education() {
               time={educationData.time}
               url={educationData.url}
               descriptionList={educationData.descriptionList}
+              technologiesList={educationData.technologiesList}
               imageSource={educationData.imageSource}
             />
           );
