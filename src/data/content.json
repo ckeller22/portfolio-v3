@@ -12,17 +12,16 @@
     "Extended JSON configuration capabilities to support more common user flows, cutting down development time for new requirements by 75%"
   ],
   "amerisaveTechnologies": [
+    "JavaScript",
+    "TypeScript",
     "Vue",
     "Quasar",
     "Java",
     "Spring Boot",
     "MSSQL",
-    "TypeScript",
     "Fastify",
     "Azure",
     "Ractive",
-    "jQuery",
-    "Bootstrap",
     "ColdFusion"
   ]
 }
