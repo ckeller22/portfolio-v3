@@ -25,7 +25,7 @@ function NavBar() {
       const scrollDifference = prevScrollPosition - currentScrollPosition;
 
       const hasScrolledUpSignificantly =
-        prevScrollPosition > currentScrollPosition && scrollDifference > 20;
+        prevScrollPosition > currentScrollPosition && scrollDifference > 10;
 
       const isNearTopOfPage = currentScrollPosition < 10;
 
@@ -149,9 +149,9 @@ function NavBar() {
         isVisible ? 'visible' : ''
       } nav-container fixed left-0 right-0 z-10 mx-auto w-full max-w-7xl py-4 lg:px-8`}
     >
-      <div className="mx-4 sm:mx-8 lg:mx-12">
+      <div className="mx-4 sm:mx-8 sm:px-8 lg:mx-12">
         <div className="relative mx-auto max-w-2xl lg:max-w-5xl">
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-row items-center justify-between ">
             <button
               type="button"
               className="flex flex-shrink-0 items-center"
