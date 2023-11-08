@@ -6,11 +6,11 @@ import portrait from '../../images/portrait.jpg';
 
 function About() {
   return (
-    <CenteredContainer className="">
-      <div className="flex flex-col-reverse gap-4 lg:grid lg:grid-cols-2 lg:gap-x-10">
+    <CenteredContainer>
+      <GenericHeading text="About Me" />
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-x-10">
         <div className="col-span-1">
-          <GenericHeading text="About Me" />
-          <GenericText className="mt-3" text={content.intro} />
+          <GenericText className="" text={content.intro} />
           <GenericText className="mt-4" text={content.about1} />
           <GenericText className="mt-4" text={content.about2} />
           <GenericText className="mt-4" text={content.about3} />
