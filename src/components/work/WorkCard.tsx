@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import work from '../../model/work';
-import Card from '../shared/CardContainer';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import work from '../../model/work';
+import Card from '../shared/CardContainer';
 
 function WorkCard() {
   return (

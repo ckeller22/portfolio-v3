@@ -6,7 +6,11 @@ interface CardContainerProps extends AppProps {
   useHover?: boolean;
 }
 
-function CardContainer({ children, useHover = false }: CardContainerProps) {
+function CardContainer({
+  children,
+  className = '',
+  useHover = false,
+}: CardContainerProps) {
   return (
     <div
       className={`group relative flex transition ${
@@ -15,7 +19,7 @@ function CardContainer({ children, useHover = false }: CardContainerProps) {
     >
       {/* <div className="absolute -inset-[-5px] rounded-xl bg-gradient-to-r from-zinc-700 to-zinc-700 opacity-0 blur transition duration-500 group-hover:opacity-100 group-hover:duration-200" /> */}
       <div
-        className={`relative flex grow flex-col rounded-xl border border-zinc-100 bg-white p-6 transition dark:border-zinc-700/40 dark:bg-zinc-900 ${
+        className={`${className} relative flex flex-grow flex-col rounded-xl border border-zinc-100 bg-white p-6 transition dark:border-zinc-700/40 dark:bg-zinc-900 ${
           useHover ? 'group-hover:shadow-xl' : ''
         }`}
       >
