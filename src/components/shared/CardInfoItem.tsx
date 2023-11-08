@@ -25,6 +25,7 @@ function CardInfoItem({
   time,
   url = undefined,
   descriptionList = undefined,
+  technologiesList = undefined,
   imageSource = undefined,
 }: CardInfoItemProps) {
   return (
@@ -73,6 +74,26 @@ function CardInfoItem({
                   return (
                     // eslint-disable-next-line react/jsx-key
                     <li>{listItem}</li>
+                  );
+                })}
+              </ul>
+            </dd>
+          </>
+        )}
+
+        {technologiesList && (
+          <>
+            <dt className="sr-only">{technologiesList.screenReaderTitle}</dt>
+            <dd className="text-sm text-zinc-500 dark:text-zinc-400">
+              <ul className="flex flex-row flex-wrap gap-2">
+                {technologiesList.value.map((tech) => {
+                  return (
+                    // eslint-disable-next-line react/jsx-key
+                    <li>
+                      <span className="inline-flex items-center rounded-md bg-zinc-50 px-2 py-1 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
+                        {tech}
+                      </span>
+                    </li>
                   );
                 })}
               </ul>

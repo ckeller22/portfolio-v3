@@ -18,6 +18,10 @@ const work: Array<WorkData> = [
       value: [...content.amerisaveHighlights],
       screenReaderTitle: 'Highlights',
     },
+    technologiesList: {
+      value: [...content.amerisaveTechnologies],
+      screenReaderTitle: 'Technologies',
+    },
   },
   {
     id: 'freelance',

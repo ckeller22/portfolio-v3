@@ -19,6 +19,7 @@ function WorkCard() {
               time={workData.time}
               url={workData.url}
               descriptionList={workData.descriptionList}
+              technologiesList={workData.technologiesList}
               imageSource={workData.imageSource}
             />
           );

@@ -10,5 +10,19 @@
     "Supported primary customer facing website built with Vue/Quasar, integrated with a Spring Boot/JPA backend.",
     "Successfully transitioned from legacy Firebase authentication provider to Auth0.",
     "Extended JSON configuration capabilities to support more common user flows, cutting down development time for new requirements by 75%"
+  ],
+  "amerisaveTechnologies": [
+    "Vue",
+    "Quasar",
+    "Java",
+    "Spring Boot",
+    "MSSQL",
+    "TypeScript",
+    "Fastify",
+    "Azure",
+    "Ractive",
+    "jQuery",
+    "Bootstrap",
+    "ColdFusion"
   ]
 }

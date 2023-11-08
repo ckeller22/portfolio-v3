@@ -37,4 +37,8 @@ export interface CardInfoItemProps {
     value: Array<string>;
     screenReaderTitle: string;
   };
+  technologiesList?: {
+    value: Array<string>;
+    screenReaderTitle: string;
+  };
 }
