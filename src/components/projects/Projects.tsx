@@ -8,6 +8,7 @@ import projects, { ProjectData } from '../../model/projects';
 import CenteredContainer from '../layout/CenteredContainer';
 import GenericHeading from '../shared/GenericHeading';
 import Card from '../shared/CardContainer';
+import Badge from '../shared/Badge';
 
 // type Props = {};
 
@@ -39,13 +40,11 @@ function ProjectCards() {
             {project.description}
           </p>
 
-          <ul className="flex flex-row flex-wrap pt-6">
+          <ul className="flex flex-row flex-wrap gap-2 pt-6">
             {project.technologies.map((technology) => {
               return (
                 <li key={technology}>
-                  <span className="inline-flex items-center pr-2 text-zinc-400 dark:text-zinc-500">
-                    {technology}
-                  </span>
+                  <Badge text={technology} />
                 </li>
               );
             })}

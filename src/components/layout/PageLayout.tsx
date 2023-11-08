@@ -27,12 +27,12 @@ function PageLayout() {
             <div className="grid grid-cols-2 gap-x-5">
               <div className="space-y-5">
                 <WorkCard />
-                <Education />
               </div>
               <div>
                 <Card>
                   <Card.Title faIcon={faScrewdriverWrench} text="Skills" />
                 </Card>
+                <Education />
               </div>
             </div>
           </CenteredContainer>
