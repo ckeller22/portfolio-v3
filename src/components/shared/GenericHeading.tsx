@@ -7,7 +7,7 @@ interface GenericHeadingProps extends AppProps {
 function GenericHeading({ text, className = '' }: GenericHeadingProps) {
   return (
     <h1
-      className={`${className} text-2xl font-bold tracking-tight text-zinc-700 dark:text-zinc-200 sm:text-xl`}
+      className={`${className} my-4 text-2xl font-bold tracking-tight text-zinc-700 dark:text-zinc-200 sm:text-xl`}
     >
       {text}
     </h1>

@@ -7,9 +7,9 @@ import portrait from '../../images/portrait.jpg';
 function About() {
   return (
     <CenteredContainer>
-      <GenericHeading text="About Me" />
-      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-x-10">
-        <div className="col-span-1">
+      <GenericHeading text="Hello World!" />
+      <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-x-10">
+        <div>
           <GenericText className="" text={content.intro} />
           <GenericText className="mt-4" text={content.about1} />
           <GenericText className="mt-4" text={content.about2} />
@@ -17,7 +17,7 @@ function About() {
           <GenericText className="mt-4" text={content.about4} />
         </div>
         <div>
-          <div className="lg:pl-20">
+          <div className="pb-4 lg:pb-0 lg:pl-20">
             <div className="max-w-xs lg:max-w-none">
               <img
                 src={portrait}

@@ -58,13 +58,13 @@ function CardInfoItem({
         </dd>
         <div className="mb-2 flex flex-row justify-between">
           <dt className="sr-only">{subtitle.screenReaderTitle}</dt>
-          <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+          <dd className="text-left text-xs text-zinc-500 dark:text-zinc-400">
             {subtitle.value}
           </dd>
           {time && (
             <>
               <dt className="sr-only">{time.screenReaderTitle}</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="text-right text-xs text-zinc-500 dark:text-zinc-400">
                 {time.value}
               </dd>
             </>

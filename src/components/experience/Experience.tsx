@@ -10,10 +10,8 @@ function Experience() {
   return (
     <CenteredContainer>
       <GenericHeading text="Experience" />
-      <div className="flex flex-col gap-x-5 lg:grid lg:grid-cols-2">
-        <div className="space-y-5">
-          <WorkCard />
-        </div>
+      <div className="flex flex-col gap-x-5 gap-y-5 lg:grid lg:grid-cols-2 lg:gap-y-0">
+        <WorkCard />
         <div className="flex flex-col gap-y-5">
           <Education />
           <Card>
