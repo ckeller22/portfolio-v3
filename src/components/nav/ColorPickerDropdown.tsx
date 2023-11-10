@@ -3,23 +3,33 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Select from '@radix-ui/react-select';
 import React, { ForwardedRef, useState } from 'react';
 import { AppProps } from '../../model/props';
+import { hexToRgb } from '../../utils/helpers';
+import colors, { ColorData } from '../../model/colors';
 
 // interface ColorPickerDropdownProps extends AppProps {}
 
 interface ColorPickerSelectItemProps extends AppProps {
-  value: string;
+  color: ColorData;
 }
 
 const SelectItem = React.forwardRef(
   (props: ColorPickerSelectItemProps, ref: ForwardedRef<HTMLDivElement>) => {
-    const { value } = props;
+    const { color } = props;
     return (
       <Select.Item
         ref={ref}
         className="flex items-center px-3 py-2"
-        value={value}
+        value={color.hexValue}
       >
-        <Select.ItemText>{value}</Select.ItemText>
+        <Select.ItemText asChild>
+          <button type="button" className="flex flex-row">
+            <div
+              className="h-6 w-6 rounded-full"
+              style={{ backgroundColor: color.hexValue }}
+            />
+            <div className="ml-2">{color.displayValue}</div>
+          </button>
+        </Select.ItemText>
         <Select.ItemIndicator className="SelectItemIndicator">
           <FontAwesomeIcon icon={faCheck} />
         </Select.ItemIndicator>
@@ -29,18 +39,22 @@ const SelectItem = React.forwardRef(
 );
 
 function ColorPickerDropdown() {
-  const [selectedColor, setSelectedColor] = useState('59,130,246'); // initial state
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [selectedColor, setSelectedColor] = useState<ColorData>(colors[0]);
 
-  // Function to update the CSS variable
   const updateCSSVariable = (color: string) => {
-    // Set the CSS variable on the root element
-    document.documentElement.style.setProperty('--color-primary', color);
+    const rgbValue = hexToRgb(color);
+    document.documentElement.style.setProperty('--color-primary', rgbValue);
   };
 
-  // Call this function when the color is selected or changed
   const handleColorChange = (color: string) => {
-    setSelectedColor(color);
-    updateCSSVariable(color);
+    const foundColor = colors.find((c) => {
+      return c.hexValue === color;
+    });
+    if (foundColor) {
+      setSelectedColor(foundColor);
+      updateCSSVariable(color);
+    }
   };
 
   return (
@@ -50,10 +64,10 @@ function ColorPickerDropdown() {
           Choose a color!
         </div>
       </Select.Trigger>
-      <Select.Content className="bg-white">
-        <SelectItem value="239,68,68">Red</SelectItem>
-        <SelectItem value="59,130,246">Blue</SelectItem>
-        <SelectItem value="249,115,22">Orange</SelectItem>
+      <Select.Content className="bg-white shadow-lg">
+        {colors.map((color) => {
+          return <SelectItem key={color.hexValue} color={color} />;
+        })}
       </Select.Content>
     </Select.Root>
   );
