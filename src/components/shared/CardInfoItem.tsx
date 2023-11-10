@@ -48,7 +48,7 @@ function CardInfoItem({
           {url ? (
             <a
               href={url}
-              className="transition hover:text-teal-500 hover:underline dark:hover:text-teal-400"
+              className="hover:text-skin-primary dark:hover:text-skin-primary transition hover:underline"
             >
               {title.value}
             </a>
