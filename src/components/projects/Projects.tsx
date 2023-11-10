@@ -19,7 +19,11 @@ function ProjectCards() {
       <Card key={project.id} useHover>
         {/* Icons */}
         <div className="flex flex-row justify-between">
-          <FontAwesomeIcon icon={faFolder} size="xl" className="themed-icon" />
+          <FontAwesomeIcon
+            icon={faFolder}
+            size="xl"
+            className="themed-icon group-hover:text-skin-primary transition"
+          />
           <div className="flex flex-row space-x-2">
             <a href={project.githubURL} className="">
               <FontAwesomeIcon
@@ -35,6 +39,8 @@ function ProjectCards() {
             )}
           </div>
         </div>
+
+        {/* Content */}
         <div className="flex h-full flex-col pt-4">
           <h2 className="themed-text-medium">{project.title}</h2>
           <p className="themed-text-base flex flex-grow">
