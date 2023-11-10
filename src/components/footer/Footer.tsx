@@ -13,7 +13,7 @@ function NavigationItems() {
             offset={-20}
             key={section.id}
           >
-            <li className="cursor-pointer transition hover:text-teal-400">
+            <li className="hover:text-skin-primary cursor-pointer transition">
               <button type="button">{section.name}</button>
             </li>
           </Link>

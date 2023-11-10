@@ -7,7 +7,7 @@ interface NavigationItemProps extends AppProps {
 }
 
 function NavigationItem({ section, className = '' }: NavigationItemProps) {
-  const classes = `${className} cursor-pointer transition hover:text-teal-400`;
+  const classes = `${className} cursor-pointer transition hover:text-skin-primary`;
 
   return (
     <Link to={section.id} smooth duration={500} offset={-20}>
