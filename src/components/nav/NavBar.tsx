@@ -13,6 +13,7 @@ import {
 } from '../../model/theme';
 import NavigationItem from './NavigationItem';
 import ToggleThemeButton from './ThemeToggleButton';
+import HomeButton from './HomeButton';
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);
@@ -143,17 +144,7 @@ function NavBar() {
       <div className="mx-4 sm:mx-8 sm:px-8 lg:mx-12">
         <div className="relative mx-auto max-w-2xl lg:max-w-5xl">
           <div className="flex flex-row items-center justify-between ">
-            <button
-              type="button"
-              className="flex flex-shrink-0 items-center"
-              onClick={handleHomeClick}
-            >
-              <img
-                className="h-10 w-10 rounded-full shadow-md ring-1 ring-zinc-900/5 dark:ring-zinc-300/20"
-                src={portrait}
-                alt="Your Company"
-              />
-            </button>
+            <HomeButton onClick={handleHomeClick} />
             <div className="flex flex-grow flex-row justify-end pr-4 sm:justify-center sm:pr-0">
               {/* Mobile menu */}
               <Dialog.Root>
@@ -192,6 +183,7 @@ function NavBar() {
               <ul className="text-md hidden flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
                 {desktopNavigationItems}
               </ul>
+              H
             </div>
             <div>
               <ToggleThemeButton
