@@ -12,7 +12,7 @@ function HomeButton({ onClick }: HomeButtonProps) {
       onClick={onClick}
     >
       <img
-        className="h-10 w-10 rounded-full shadow-md ring-1 ring-zinc-900/5 dark:ring-zinc-300/20"
+        className="hover:ring-skin-primary dark:hover:ring-skin-primary h-10 w-10 rounded-full ring-2 ring-zinc-900/5 dark:ring-zinc-300/20"
         src={portrait}
         alt="Portrait of the author"
       />
