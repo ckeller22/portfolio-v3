@@ -4,7 +4,6 @@ import { faChevronDown, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { animateScroll } from 'react-scroll';
 import { debounce } from 'lodash';
-import portrait from '../../images/portrait.jpg';
 import sections, { SectionData } from '../../model/sections';
 import {
   DEFAULT_THEME,
@@ -12,8 +11,9 @@ import {
   Theme,
 } from '../../model/theme';
 import NavigationItem from './NavigationItem';
-import ToggleThemeButton from './ThemeToggleButton';
 import HomeButton from './HomeButton';
+import ThemeToggleButton from './ThemeToggleButton';
+import ColorPickerDropdown from './ColorPickerDropdown';
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);
@@ -183,10 +183,10 @@ function NavBar() {
               <ul className="text-md hidden flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
                 {desktopNavigationItems}
               </ul>
-              H
             </div>
-            <div>
-              <ToggleThemeButton
+            <div className="flex flex-row">
+              <ColorPickerDropdown />
+              <ThemeToggleButton
                 currentTheme={currentTheme}
                 updateTheme={updateTheme}
               />
