@@ -13,6 +13,11 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        skin: {
+          primary: withOpacity('--color-primary'),
+        },
+      },
       textColor: {
         skin: {
           primary: withOpacity('--color-primary'),

@@ -166,7 +166,7 @@ function NavBar() {
                   </Dialog.Overlay>
                   <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
                     <div className="p-6">
-                      <div className="text-md font-mediu flex flex-row justify-between">
+                      <div className="text-md flex flex-row justify-between font-medium">
                         Navigation
                         <Dialog.Close asChild>
                           <FontAwesomeIcon icon={faX} className="h-6 w-6" />
