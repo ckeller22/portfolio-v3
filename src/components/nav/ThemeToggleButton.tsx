@@ -26,9 +26,9 @@ function ThemeToggleButton({
       onClick={toggleTheme}
     >
       {currentTheme === Theme.Dark ? (
-        <FontAwesomeIcon icon={faMoon} size="xl" />
+        <FontAwesomeIcon icon={faMoon} size="xl" fixedWidth />
       ) : (
-        <FontAwesomeIcon icon={faSun} size="xl" />
+        <FontAwesomeIcon icon={faSun} size="xl" fixedWidth />
       )}
     </button>
   );
