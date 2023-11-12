@@ -148,17 +148,12 @@ function NavBar() {
             <div className="flex flex-grow flex-row justify-end pr-4 sm:justify-center sm:pr-0">
               {/* Mobile menu */}
               <Dialog.Root>
-                <Dialog.Trigger asChild>
-                  <button
-                    type="button"
-                    className="font-md flex flex-row items-center rounded-full bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden"
-                  >
-                    Menu
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className="ml-2 h-3 w-3"
-                    />
-                  </button>
+                <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden">
+                  Menu
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="ml-2 h-3 w-3"
+                  />
                 </Dialog.Trigger>
                 <Dialog.Portal>
                   <Dialog.Overlay asChild>
