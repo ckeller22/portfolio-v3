@@ -180,7 +180,7 @@ function NavBar() {
                 </Dialog.Portal>
               </Dialog.Root>
               {/* Nav List Desktop */}
-              <ul className="text-md hidden flex-row overflow-hidden rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
+              <ul className="text-md hidden flex-row overflow-hidden rounded-md bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
                 {desktopNavigationItems}
               </ul>
             </div>

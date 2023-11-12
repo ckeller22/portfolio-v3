@@ -13,6 +13,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      animation: {
+        fadeIn: 'fadeIn 0.3s ease-out',
+        fadeOut: 'fadeOut 3s ease-in',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0.75, transform: 'scale(.95)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
+      },
       colors: {
         skin: {
           primary: withOpacity('--color-primary'),
