@@ -1,33 +1,13 @@
-import { Link } from 'react-scroll';
 import sections from '../../model/sections';
-
-function NavigationItems() {
-  return (
-    <>
-      {sections.map((section) => {
-        return (
-          <Link
-            to={section.id}
-            smooth
-            duration={500}
-            offset={-20}
-            key={section.id}
-          >
-            <li className="hover:text-skin-primary cursor-pointer transition">
-              <button type="button">{section.name}</button>
-            </li>
-          </Link>
-        );
-      })}
-    </>
-  );
-}
+import NavigationItem from '../shared/NavigationItem';
 
 function NavList() {
   return (
     <div className="text-md font-medium text-zinc-800 dark:text-zinc-100">
       <ul className="flex flex-row flex-wrap space-x-4">
-        <NavigationItems />
+        {sections.map((section) => {
+          return <NavigationItem section={section} key={section.id} />;
+        })}
       </ul>
     </div>
   );

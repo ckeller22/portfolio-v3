@@ -10,10 +10,63 @@ import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
 } from '../../model/theme';
-import NavigationItem from './NavigationItem';
+import NavigationItem from '../shared/NavigationItem';
 import HomeButton from './HomeButton';
 import ThemeToggleButton from './ThemeToggleButton';
 import ColorPickerDropdown from './ColorPickerDropdown';
+
+function MobileNavigationList() {
+  return (
+    <Dialog.Root>
+      <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden">
+        Menu
+        <FontAwesomeIcon icon={faChevronDown} className="ml-2 h-3 w-3" />
+      </Dialog.Trigger>
+      <Dialog.Portal>
+        <Dialog.Overlay asChild>
+          <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
+        </Dialog.Overlay>
+        <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+          <div className="p-6">
+            <div className="text-md flex flex-row justify-between font-medium">
+              Navigation
+              <Dialog.Close asChild>
+                <FontAwesomeIcon icon={faX} className="h-6 w-6" />
+              </Dialog.Close>
+            </div>
+            <ul className="text-md flex flex-col divide-y divide-zinc-100 pt-4 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+              {sections.map((section: SectionData) => {
+                return (
+                  <NavigationItem
+                    key={section.id}
+                    section={section}
+                    className="py-2"
+                  />
+                );
+              })}
+            </ul>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  );
+}
+
+function DesktopNavigationList() {
+  return (
+    <ul className="text-md hidden flex-row overflow-hidden rounded-md bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
+      {sections.map((section: SectionData) => {
+        return (
+          <NavigationItem
+            key={section.id}
+            section={section}
+            className="px-3 py-2"
+          />
+        );
+      })}
+    </ul>
+  );
+}
 
 function NavBar() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(DEFAULT_THEME);
@@ -117,22 +170,6 @@ function NavBar() {
     animateScroll.scrollToTop(options);
   };
 
-  const desktopNavigationItems = sections.map((section: SectionData) => {
-    return (
-      <NavigationItem
-        key={section.id}
-        section={section}
-        className="px-3 py-2"
-      />
-    );
-  });
-
-  const mobileNavigationItems = sections.map((section: SectionData) => {
-    return (
-      <NavigationItem key={section.id} section={section} className="py-2" />
-    );
-  });
-
   return (
     // The following divs replicate the structure of CenteredContainer
     // but with support for fixed positioning.
@@ -145,40 +182,12 @@ function NavBar() {
         <div className="relative mx-auto max-w-2xl lg:max-w-5xl">
           <div className="flex flex-row items-center justify-between ">
             <HomeButton onClick={handleHomeClick} />
+
             <div className="flex flex-grow flex-row justify-end pr-4 sm:justify-center sm:pr-0">
-              {/* Mobile menu */}
-              <Dialog.Root>
-                <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden">
-                  Menu
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className="ml-2 h-3 w-3"
-                  />
-                </Dialog.Trigger>
-                <Dialog.Portal>
-                  <Dialog.Overlay asChild>
-                    <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
-                  </Dialog.Overlay>
-                  <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
-                    <div className="p-6">
-                      <div className="text-md flex flex-row justify-between font-medium">
-                        Navigation
-                        <Dialog.Close asChild>
-                          <FontAwesomeIcon icon={faX} className="h-6 w-6" />
-                        </Dialog.Close>
-                      </div>
-                      <ul className="text-md flex flex-col divide-y divide-zinc-100 pt-4 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                        {mobileNavigationItems}
-                      </ul>
-                    </div>
-                  </Dialog.Content>
-                </Dialog.Portal>
-              </Dialog.Root>
-              {/* Nav List Desktop */}
-              <ul className="text-md hidden flex-row overflow-hidden rounded-md bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
-                {desktopNavigationItems}
-              </ul>
+              <MobileNavigationList />
+              <DesktopNavigationList />
             </div>
+
             <div className="flex flex-row">
               <ColorPickerDropdown />
               <ThemeToggleButton
