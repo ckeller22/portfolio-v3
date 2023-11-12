@@ -18,7 +18,7 @@ import ColorPickerDropdown from './ColorPickerDropdown';
 function MobileNavigationList() {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:hidden">
+      <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 md:hidden">
         Menu
         <FontAwesomeIcon icon={faChevronDown} className="ml-2 h-3 w-3" />
       </Dialog.Trigger>
@@ -54,7 +54,7 @@ function MobileNavigationList() {
 
 function DesktopNavigationList() {
   return (
-    <ul className="text-md hidden flex-row overflow-hidden rounded-md bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 sm:flex">
+    <ul className="text-md hidden flex-row overflow-hidden rounded-md bg-white/90 px-3 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 md:flex">
       {sections.map((section: SectionData) => {
         return (
           <NavigationItem
@@ -183,7 +183,7 @@ function NavBar() {
           <div className="flex flex-row items-center justify-between ">
             <HomeButton onClick={handleHomeClick} />
 
-            <div className="flex flex-grow flex-row justify-end pr-4 sm:justify-center sm:pr-0">
+            <div className="flex flex-grow flex-row justify-end pr-4 md:justify-center md:pr-0">
               <MobileNavigationList />
               <DesktopNavigationList />
             </div>
