@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { faChevronDown, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,8 +16,10 @@ import ThemeToggleButton from './ThemeToggleButton';
 import ColorPickerDropdown from './ColorPickerDropdown';
 
 function MobileNavigationList() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger className="font-md flex flex-row items-center rounded-md bg-white/90 px-3 py-2 font-medium text-zinc-800 shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20 md:hidden">
         Menu
         <FontAwesomeIcon icon={faChevronDown} className="ml-2 h-3 w-3" />
@@ -26,12 +28,17 @@ function MobileNavigationList() {
         <Dialog.Overlay asChild>
           <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
         </Dialog.Overlay>
+
         <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
           <div className="p-6">
             <div className="text-md flex flex-row justify-between font-medium">
               Navigation
-              <Dialog.Close asChild>
-                <FontAwesomeIcon icon={faX} className="h-6 w-6" />
+              <Dialog.Close>
+                <FontAwesomeIcon
+                  icon={faX}
+                  className="h-4 w-4 text-zinc-800 dark:text-zinc-200"
+                  fixedWidth
+                />
               </Dialog.Close>
             </div>
             <ul className="text-md flex flex-col divide-y divide-zinc-100 pt-4 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
@@ -41,6 +48,9 @@ function MobileNavigationList() {
                     key={section.id}
                     section={section}
                     className="py-2"
+                    onClick={() => {
+                      setOpen(false);
+                    }}
                   />
                 );
               })}

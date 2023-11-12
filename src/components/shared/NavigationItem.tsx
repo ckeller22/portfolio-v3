@@ -6,7 +6,11 @@ interface NavigationItemProps extends AppProps {
   section: SectionData;
 }
 
-function NavigationItem({ section, className = '' }: NavigationItemProps) {
+function NavigationItem({
+  section,
+  className = '',
+  onClick = undefined,
+}: NavigationItemProps) {
   return (
     <li
       className={`${className} hover:text-skin-primary cursor-pointer transition`}
@@ -16,7 +20,13 @@ function NavigationItem({ section, className = '' }: NavigationItemProps) {
           Resume
         </a>
       ) : (
-        <Link to={section.id} smooth duration={500} offset={-20}>
+        <Link
+          to={section.id}
+          smooth
+          duration={500}
+          offset={-20}
+          onClick={onClick}
+        >
           {section.name}
         </Link>
       )}

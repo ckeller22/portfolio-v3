@@ -10,6 +10,7 @@ import { ReactNode } from 'react';
 export interface AppProps {
   children?: ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 /**
