@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  /* Fallback to teal default if JS doesn't set correctly to make sure hover still works. */
+  :root {
+    --color-primary: 20, 184, 166;
+  }
+
+  /* Always take the width of scrollbar into consideration. */
+  /* Overrides the margin shift Radix UI applies when removing scrollbar. */
+  .prevent-layout-shift {
+    overflow-y: scroll !important;
+    margin-right: 0 !important;
+  }
+
   .themed-text-base {
     @apply text-base text-zinc-600 dark:text-zinc-400;
   }

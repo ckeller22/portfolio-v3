@@ -3,7 +3,7 @@ export type ColorData = {
   hexValue: string;
 };
 
-const colors: Array<ColorData> = [
+export const colors: Array<ColorData> = [
   {
     displayValue: 'Red',
     hexValue: '#ef4444',
@@ -43,4 +43,5 @@ const colors: Array<ColorData> = [
   },
 ];
 
-export default colors;
+export const DEFAULT_COLOR = colors[5];
+export const LOCAL_STORAGE_COLOR_KEY = 'color';
