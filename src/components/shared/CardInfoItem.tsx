@@ -48,7 +48,7 @@ function CardInfoItem({
           {url ? (
             <a
               href={url}
-              className="hover:text-skin-primary dark:hover:text-skin-primary transition hover:underline"
+              className="transition hover:text-skin-primary hover:underline dark:hover:text-skin-primary"
             >
               {title.value}
             </a>
@@ -75,11 +75,8 @@ function CardInfoItem({
             <dt className="sr-only">{descriptionList.screenReaderTitle}</dt>
             <dd className="text-sm text-zinc-500 dark:text-zinc-400">
               <ul className="pl- space-y-2">
-                {descriptionList.value.map((listItem) => {
-                  return (
-                    // eslint-disable-next-line react/jsx-key
-                    <li>{listItem}</li>
-                  );
+                {descriptionList.value.map((listItem, index) => {
+                  return <li key={index}>{listItem}</li>;
                 })}
               </ul>
             </dd>
@@ -91,10 +88,10 @@ function CardInfoItem({
             <dt className="sr-only">{technologiesList.screenReaderTitle}</dt>
             <dd>
               <ul className="mt-2 flex flex-row flex-wrap gap-2">
-                {technologiesList.value.map((tech) => {
+                {technologiesList.value.map((tech, index) => {
                   return (
-                    // eslint-disable-next-line react/jsx-key
-                    <li>
+                    // eslint-disable-next-line react/no-array-index-key
+                    <li key={index}>
                       <Badge text={tech} />
                     </li>
                   );
