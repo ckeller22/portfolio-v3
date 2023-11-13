@@ -9,14 +9,13 @@ function About() {
   return (
     <CenteredContainer>
       <Element name="about-section" />
-      <GenericHeading text="Hello World!" />
+      <GenericHeading text="About Me" />
       <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-x-10">
-        <div>
-          <GenericText className="" text={content.intro} />
-          <GenericText className="mt-4" text={content.about1} />
-          <GenericText className="mt-4" text={content.about2} />
-          <GenericText className="mt-4" text={content.about3} />
-          <GenericText className="mt-4" text={content.about4} />
+        <div className="flex flex-col gap-y-5">
+          {content.about.map((paragraph, index) => {
+            // eslint-disable-next-line react/no-array-index-key
+            return <GenericText key={index} text={paragraph} />;
+          })}
         </div>
         <div>
           <div className="pb-4 lg:pb-0 lg:pl-20">
