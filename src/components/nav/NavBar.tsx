@@ -117,9 +117,11 @@ function NavBar() {
     switch (theme) {
       case Theme.Light:
         document.documentElement.classList.remove('dark');
+        document.documentElement.style.setProperty('color-scheme', 'light');
         break;
       case Theme.Dark:
         document.documentElement.classList.add('dark');
+        document.documentElement.style.setProperty('color-scheme', 'dark');
         break;
       default:
         // Unreachable.
