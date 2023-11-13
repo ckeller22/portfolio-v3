@@ -22,7 +22,7 @@ function About() {
             <div className="max-w-xs lg:max-w-none">
               <img
                 src={portrait}
-                alt=""
+                alt="Portrait of Chris Keller"
                 className=" aspect-square rounded-2xl object-cover"
               />
             </div>
