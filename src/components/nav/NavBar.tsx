@@ -26,10 +26,10 @@ function MobileNavigationList() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay asChild>
-          <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" />
+          <div className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm transition-opacity duration-150 dark:bg-black/80" />
         </Dialog.Overlay>
 
-        <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white  shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
+        <Dialog.Content className="fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white shadow-md  ring-1 ring-zinc-900/5 data-[state=closed]:animate-fadeOut data-[state=open]:animate-fadeIn dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-300/20">
           <div className="p-6">
             <div className="text-md flex flex-row justify-between font-medium">
               Navigation

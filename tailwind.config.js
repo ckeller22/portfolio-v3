@@ -14,13 +14,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        fadeIn: 'fadeIn 0.3s ease-out',
-        fadeOut: 'fadeOut 3s ease-in',
+        fadeIn: 'fadeIn 0.1s ease-out',
+        fadeOut: 'fadeOut 0.1s ease-in',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0.75, transform: 'scale(.95)' },
           '100%': { opacity: 1, transform: 'scale(1)' },
+        },
+        fadeOut: {
+          '0%': { opacity: 1, transform: 'scale(1)' },
+          '100%': { opacity: 0.75, transform: 'scale(.95)' },
         },
       },
       colors: {
