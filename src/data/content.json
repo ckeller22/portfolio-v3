@@ -3,9 +3,10 @@
   "introHeader": "Full stack engineer, problem solver, and a builder of things.",
   "about": [
     "Hello world! My name is Chris, and I am an experienced software engineer with a passion for building scalable, performant, and user-friendly applications. With a background in both front-end and back-end development, I strive to create seamless digital experiences that drive value and impact.",
-    "Growing up I had always had a passion for taking things apart, breaking stuff, and figuring out how to put things back together again. I am a creative person and love creating and designing beautiful experiences and elegant software and solutions. Whether it be music, art, or technology, I just love to make things.",
+    "Growing up I had always had a passion for taking things apart, breaking stuff, and figuring out how to put things back together again. I’ve been driven by an insatiable curiosity and a need to understand the <em>how</em> and the <em>why</em> things work. It's how I’ve always lived. The joy of learning and quest for knowledge fuels me.",
+    "As a creative, I love designing beautiful experiences and elegant software solutions. Whether it be music, art, or technology, I just love to make things. I take great pleasure in the process of transforming visions into reality and bringing dreams to life.",
     "I am also a natural problem solver and I get a lot of gratification in thinking up solutions and solving difficult problems.",
-    "Off the clock, I'm a gamer, a nerd, and an avid collector of hobbies, always on the lookout for new adventures and opportunities. If you're interested in collaborating or learning more about my work, feel free to reach out or connect with me on LinkedIn."
+    "Off the clock, I'm a gamer, a nerd, and a professional hobby collector. I'm always on the lookout for new adventures and opportunities. If you're interested in collaborating, learning more about my work, or just want to chat, feel free to reach out or connect with me on LinkedIn."
   ],
   "amerisaveHighlights": [
     "Develop and maintain RESTful APIs in a distributed environment using Java, Spring Boot, TypeScript, NestJS/Fastify and MSSQL.",
