@@ -21,6 +21,7 @@ const projects: Array<ProjectData> = [
     description: 'Previous portfolio website, built using React and Tailwind.',
     technologies: ['Javascript', 'React', 'Tailwind', 'Netlify'],
     githubURL: 'https://github.com/ckeller22/portfolio_v2',
+    liveURL: 'https://v2.chriskeller.xyz/',
   },
   {
     id: 'tixgit',
