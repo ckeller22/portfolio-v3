@@ -8,6 +8,19 @@
     "I am also a natural problem solver and I get a lot of gratification in thinking up solutions and solving difficult problems.",
     "Off the clock, I'm a gamer, a nerd, and a professional hobby collector. I'm always on the lookout for new adventures and opportunities. If you're interested in collaborating, learning more about my work, or just want to chat, feel free to reach out or connect with me on LinkedIn."
   ],
+  "harmonyhitHighlights": [],
+  "harmonyhitTechnologies": [
+    "JavaScript",
+    "TypeScript",
+    "Angular",
+    "Java",
+    "Kotlin",
+    "Spring",
+    "Kubernetes",
+    "Google Cloud",
+    "PostgreSQL",
+    "MSSQL"
+  ],
   "amerisaveHighlights": [
     "Develop and maintain RESTful APIs in a distributed environment using Java, Spring Boot, TypeScript, NestJS/Fastify and MSSQL.",
     "Supported primary customer facing website built with Vue/Quasar, integrated with a Spring Boot/JPA backend.",

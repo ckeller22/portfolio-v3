@@ -1,4 +1,5 @@
 import amerisaveIcon from '../images/amerisave-icon.jpg';
+import harmonyhitIcon from '../images/harmonyhit-icon.jpg';
 import content from '../data/content.json';
 import { CardInfoItemProps } from './props';
 
@@ -7,6 +8,22 @@ export interface WorkData extends CardInfoItemProps {
 }
 
 const work: Array<WorkData> = [
+  {
+    id: 'harmonyhit',
+    imageSource: harmonyhitIcon,
+    title: { value: 'Harmony Healthcare IT', screenReaderTitle: 'Employer' },
+    subtitle: { value: 'Software Engineer', screenReaderTitle: 'Position' },
+    time: { value: 'Jan 2024 - Present', screenReaderTitle: 'Dates' },
+    url: 'https://www.harmonyhit.com/',
+    descriptionList: {
+      value: [...content.harmonyhitHighlights],
+      screenReaderTitle: 'Highlights',
+    },
+    technologiesList: {
+      value: [...content.harmonyhitTechnologies],
+      screenReaderTitle: 'Technologies',
+    },
+  },
   {
     id: 'amerisave',
     imageSource: amerisaveIcon,
