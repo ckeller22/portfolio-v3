@@ -13,7 +13,7 @@ const projects: Array<ProjectData> = [
     title: 'Portfolio Website v3',
     description: 'This website, built using Typescript, React, and Tailwind.',
     technologies: ['TypeScript', 'React', 'Radix UI', 'Tailwind', 'Vite'],
-    githubURL: 'https://github.com/ckeller22/portfolio-v2',
+    githubURL: 'https://github.com/ckeller22/portfolio-v3',
   },
   {
     id: 'portfolio-v2',
