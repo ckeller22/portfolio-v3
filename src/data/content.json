@@ -8,11 +8,21 @@
     "I am also a natural problem solver and I get a lot of gratification in thinking up solutions and solving difficult problems.",
     "Off the clock, I'm a gamer, a nerd, and a professional hobby collector. I'm always on the lookout for new adventures and opportunities. If you're interested in collaborating, learning more about my work, or just want to chat, feel free to reach out or connect with me on LinkedIn."
   ],
-  "harmonyhitHighlights": [],
+  "harmonyhitLeadHighlights": [
+    "Leader of the Core team, balancing feature development and development support across the full suite of company products, spanning multiple technologies and stacks.",
+    "Oversee all stages of product development from MVP to production, with a focus on building reliable, maintainable systems within a Service-Oriented Architecture.",
+    "Lead technical investigations (spikes) to de-risk unknowns and contribute architectural direction based on comprehensive understanding of product capabilities and long-term goals."
+  ],
+  "harmonyhitLeadTechnologies": [],
+  "harmonyhitHighlights": [
+    "Support an AngularJS application with Java/Kotlin Spring Boot backend.",
+    "Maintain several RabbitMQ microservices, built with Java, Kotlin, and Spring."
+  ],
   "harmonyhitTechnologies": [
     "JavaScript",
     "TypeScript",
     "Angular",
+    "React",
     "Java",
     "Kotlin",
     "Spring",

@@ -14,9 +14,10 @@ function NavList() {
 }
 
 function FooterMetadata() {
-  const COPYRIGHT = '© Built by Chris Keller - 2023';
+  const currentYear = new Date().getFullYear();
+  const copyright = `© 2023-${currentYear} Built by Chris Keller`;
 
-  return <div className="text-zinc-600 dark:text-zinc-400">{COPYRIGHT}</div>;
+  return <div className="text-zinc-600 dark:text-zinc-400">{copyright}</div>;
 }
 
 function Footer() {
