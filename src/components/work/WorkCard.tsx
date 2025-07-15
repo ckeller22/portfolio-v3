@@ -3,6 +3,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import work from '../../model/work';
 import Card from '../shared/CardContainer';
+import resume from '../../model/resume';
 
 function WorkCard() {
   return (
@@ -27,7 +28,7 @@ function WorkCard() {
       </ul>
 
       <a
-        href="/assets/christopher-keller-resume-10-26-2023.pdf"
+        href={resume}
         download
         className="group mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-zinc-50 px-2 py-3 font-medium text-zinc-900 transition hover:bg-zinc-100 dark:bg-zinc-800/90 dark:text-zinc-300 dark:hover:bg-zinc-700/90 dark:hover:text-zinc-200"
         type="button"

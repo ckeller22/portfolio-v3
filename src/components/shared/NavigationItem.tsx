@@ -1,6 +1,7 @@
 import Link from 'react-scroll/modules/components/Link';
 import { AppProps } from '../../model/props';
 import { SectionData } from '../../model/sections';
+import resume from '../../model/resume';
 
 interface NavigationItemProps extends AppProps {
   section: SectionData;
@@ -13,10 +14,10 @@ function NavigationItem({
 }: NavigationItemProps) {
   return (
     <li
-      className={`${className} hover:text-skin-primary cursor-pointer transition`}
+      className={`${className} cursor-pointer transition hover:text-skin-primary`}
     >
       {section.id === 'resume-section' ? (
-        <a href="/assets/christopher-keller-resume-10-26-2023.pdf" download>
+        <a href={resume} download>
           Resume
         </a>
       ) : (
