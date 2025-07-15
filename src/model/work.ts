@@ -9,11 +9,30 @@ export interface WorkData extends CardInfoItemProps {
 
 const work: Array<WorkData> = [
   {
+    id: 'harmonyhit2',
+    imageSource: harmonyhitIcon,
+    title: { value: 'Harmony Healthcare IT', screenReaderTitle: 'Employer' },
+    subtitle: {
+      value: 'Senior Software Engineer and Dev Lead',
+      screenReaderTitle: 'Position',
+    },
+    time: { value: 'Apr 2025 - Present', screenReaderTitle: 'Dates' },
+    url: 'https://www.harmonyhit.com/',
+    descriptionList: {
+      value: [...content.harmonyhitLeadHighlights],
+      screenReaderTitle: 'Highlights',
+    },
+    technologiesList: {
+      value: [...content.harmonyhitLeadTechnologies],
+      screenReaderTitle: 'Technologies',
+    },
+  },
+  {
     id: 'harmonyhit',
     imageSource: harmonyhitIcon,
     title: { value: 'Harmony Healthcare IT', screenReaderTitle: 'Employer' },
     subtitle: { value: 'Software Engineer', screenReaderTitle: 'Position' },
-    time: { value: 'Jan 2024 - Present', screenReaderTitle: 'Dates' },
+    time: { value: 'Jan 2024 - May 2025', screenReaderTitle: 'Dates' },
     url: 'https://www.harmonyhit.com/',
     descriptionList: {
       value: [...content.harmonyhitHighlights],
